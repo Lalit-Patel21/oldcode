@@ -1,0 +1,48 @@
+package accountex;
+
+public class Account {
+    private int acctId;
+    private String custName;
+    private double bal;
+    public Account(int id,String name,double amt){
+        acctId=id;
+        custName=name;
+        bal=amt;
+    }
+    public void showAccount(){
+        System.out.println("account id:"+acctId);
+        System.out.println("name:"+custName);
+        System.out.println("balance:"+bal);
+        System.out.println("==============================");
+    }
+}
+public class UseAccount {
+    public static void main(String[] args) {
+        Account obj1=new Account(101,"Amit",50000.0);
+        obj1.showAccount();
+        Account obj2;
+        obj2=new Account(102,"Deepak",60000.0);
+        obj2.showAccount();
+    }
+}
+
+Enter id ,name and bal for object 1:
+101 Ravi 67000.0
+Enter id ,name and bal for object 2:
+102 Deepak 56000.0
+Here are the details:
+101 Ravi 67000.0
+102 Deepak 56000.0
+
+
+
+
+
+
+
+
+
+
+
+
+

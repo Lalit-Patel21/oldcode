@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1604834876 source:d:\online c++\primsalgo\main.c
+	<stdio.h>
+	<conio.h>
+

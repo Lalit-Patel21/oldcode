@@ -1,0 +1,22 @@
+		FILE HANDLING
+
+
+In java , file handling means interacting with the "File System" of our computer and performing two kinds of operations:
+
+1. Operations which allow us to access "File Attributes"
+
+2.Operations which allow us to perform read/write operations in a file.
+
+For Ist category of operations ,java provides us a class called "File"
+
+For IInd category of operations , java provides us 4 classes called "OutputStream" , "InputStream" , "Writer" and "Reader".
+
+First two deal with binary mode of file handling, the last two deal with text mode.
+
+All these classes are available in the package java.io.
+
+
+
+
+
+
