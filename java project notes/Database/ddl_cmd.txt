@@ -1,0 +1,26 @@
+1)create 
+
+create table <table_name> (<col_name> <datatype>(size),<col_name> <datatype>(size), . . .. . . .. );
+
+create table emp(id number(5),name varchar2(20), salary number(7,2));
+
+
+2) alter command :- alter the exisiting table like add a new column , update the exisiting column and remove the exisiting column.
+
+alter table <table_name> <add/drop/modify> (<col_name> <datatype>(size)..);
+
+adding new column in a table
+    ex:- alter table emp add (dept varchar2(20), post varchar2(20));
+
+modify the exisiting column
+    ex :- alter table emp modify (name varchar2(40) );
+
+remove the exisiting column
+   ex :- alter table emp drop (dept) ;
+
+3) truncate cmd - this cmd is used to remove all the rows in a table
+     tuncate table <table_name> ;
+
+  
+4) drop command :- delete the table with data
+      drop table <table_name> ; 

@@ -1,0 +1,37 @@
+1) insert command :- this cammond is used to insert a new row in a table
+  a) insert into <table_name> (<list of column_name>) values (<list of value>)
+     insert into emp(id,name,salary) values (101,'sumit',59933);
+  
+  b) insert into <table_name> values (<list of value>);
+     insert into emp values(102,'Anil' , 40000 ); 
+
+  c) insert into <table_name> values (&<col_name> ,'&<col_name>', &<col_name>) ;
+     insert into  emp values(&id, '&name' , &salary);
+
+2) update command :- this command is update the exisiting data.
+    update <table_name> set <col_name>=<values>,<col_name>=<values> [where <testcondition>];
+
+  a) update all the rows in a table
+     update emp set salary = salary + salary*20/100;
+ 
+  b) update select  record 
+     update emp set salary = salary + 2000 where id=302;
+
+  c) update emp set salary= salary +3000 where salary <20000;
+
+  d) update emp set salary= salary+200 where salary>=20000 and salary<=50000;
+
+3) delete command is used to delete one row or more then one rows.
+   
+   delete from <table_name> [ where <testcondiotion > ];
+  
+  a) delete all rows in a table. 
+       delete from emp ;
+
+  b) delete selected person /emp. 
+       delete from emp where id =1022;
+
+  c) delete from emp where id >=200 and id <=400 ;
+
+
+  

@@ -1,0 +1,47 @@
+create table users(userid varchar2(20),empid varchar2(20),password varchar2(20),usertype varchar2(20),username varchar2(20));
+
+create table employees(empid varchar2(20),empname varchar2(20),job varchar2(20),salary number(10));
+
+
+create table products(p_id varchar2(20), p_name varchar2(20),p_companyname varchar2(20),p_price number(10,2),our_price number(10,2),p_tax number(3),quantity number(5));
+
+create table orders(order_id varchar2(20), p_id varchar2(20),p_name varchar2(20),p_company varchar2(20),p_price number(10,2),our_price number(10,2),tax number(3),quantity number(5), userid varchar2(20));
+
+contraints:
+
+alter table employees add constraint EID_EMP_PK primary key(empid);
+
+alter table users add constraint EID_USE_fK foreign key(empid) references employees(empid);
+
+alter table users add constraint UID_USE_PK primary key(userid);
+
+alter table products add constraint PID_PRO_PK primary key(p_id);
+
+alter table orders add constraint OID_PID_ORD_PK primary key(order_id,p_id);
+
+alter table orders add constraint PID_ORD_fK foreign key (p_id) references products(p_id);
+
+insert Data-
+
+insert into employees values('E101','yash','Manager',50000);
+
+insert into users values('yash@123','E101','admin','Manager', 'yash');
+
+alter table products add(status char(1));
+
+alter table orders drop(p_name,p_company,p_price,our_price,tax);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+select command is used to display all the record in a screen.
+
+select < list of column name > from <table _name> [ where <textcondition> ];
+
+1) to display all the rows 
+      select id , name ,salary from emp ;
+
+2) to display all the rows and columns.
+       select * from emp ;
+
+3) to display the selected rows and all column
+    select * from emp where salary >=40000; 
+
+4) to display selected column and selected rows.
+    select id,salary from emp where salary<40000; 

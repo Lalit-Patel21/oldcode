@@ -1,0 +1,106 @@
+
+
+DataOutputStream 
+
+Constructor:
+public DataOutputStream(OutputStream)
+
+Code
+FileOutputStream fs=new FileOutputStream("d:\\data.txt");
+DataOutputStream dout=new DataOutputStream(fs);
+OR
+DataOutputStream dout=new DataOutputStream(new FileOutputStream("d:\\data.txt"));
+
+
+Methods:
+
+1. public void writeInt(int) throws IOException
+2. public void writeFloat(float) throws IOException
+3. public void writeBoolean(boolean) throws IOException
+4. public void writeUTF(String) throws IOException
+
+Like this we have methods for every primitive type
+
+
+DataInputStream 
+
+Constructor:
+public DataInputStream(InputStream)
+Code
+FileInputStream fs=new FileInputStream("d:\\data.txt");
+DataInputStream din=new DataInputStream(fs);
+OR
+DataInputStream din=new DataInputStream(new FileInputStream("d:\\data.txt"));
+
+
+Methods:
+
+1. public int readInt(  ) throws IOException
+2. public float readFloat( ) throws IOException
+3. public boolean readBoolean( ) throws IOException
+4. public String readUTF( ) throws IOException
+
+Like this we have methods for every primitive type
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ObjectOutputStream 
+
+Constructor:
+public ObjectOutputStream(OutputStream)
+
+Code
+FileOutputStream fs=new FileOutputStream("d:\\data.txt");
+ObjectOutputStream oos=new ObjectOutputStream(fs);
+OR
+ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream("d:\\data.txt"));
+
+Methods:
+
+ public void writeObject(Object) throws IOException
+
+
+ObjectInputStream 
+
+Constructor:
+public ObjectInputStream(InputStream)
+
+Code
+FileInputStream fin=new FileInputStream("d:\\data.txt");
+ObjectInputStream ios=new ObjectInputStream(fin);
+OR
+ObjectInputStream ios=new ObjectInputStream(new FileInputStream("d:\\data.txt"));
+
+Method:
+
+ public Object readObject( ) throws IOException
+
+
+
+
+
+
+
+
+
+
+
+
+

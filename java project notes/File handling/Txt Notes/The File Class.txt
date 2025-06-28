@@ -1,0 +1,202 @@
+The "File"  class
+
+Constructor:
+
+ public File(String)
+
+
+
+Example:
+
+File f=new File("d:\\Assignments\\Test Papers\\Test Paper 2.docx");
+OR
+File f=new File("d:/Assignments/Test Papers/Test Paper 2.docx");
+
+
+
+
+
+Methods Of "File" class
+
+1. public boolean exists( )
+2. public String getName( )
+3. public boolean isFile( )
+4. public boolean isDirectory( )
+5. public boolean isHidden( )
+6. public boolean canWrite( )
+
+
+7. public boolean delete()
+8. public long length()
+
+
+
+9. public long lastModified()
+
+
+
+
+10. public boolean mkdir()
+11. public boolean mkdirs()
+
+
+12.public String[ ] list( )
+
+
+
+
+
+
+
+
+
+
+READING TEXT FILES
+
+The "Reader" class
+
+Methods:
+
+1. public int read( ) throws IOException
+
+2. public int read(char[ ]) throws IOException
+
+3. public  int read(char[ ],int off,int len )throws IOException
+
+4. public boolean ready( ) throws IOException
+
+5. public  void close( ) throws IOException
+
+6. public void reset( ) throws IOException
+
+
+
+The "FileReader" class
+
+Constructors:
+
+1. public FileReader(String) throws FileNotFoundException
+
+2. public FileReader(File) throws FileNotFoundException
+
+
+
+The "BufferedReader" class
+
+Constructor:
+
+1. public BufferedReader(Reader) 
+
+Method:
+
+1. public String readLine( ) throws IOException
+
+Code:
+
+    
+    FileReader fr=new FileReader("c:/message.txt");
+    BufferedReader br=new BufferedReader(fr);
+
+
+
+
+
+
+
+
+
+WRITING TEXT FILES
+
+
+The "Writer" class
+
+
+Methods:
+
+1. public void write(int ) throws IOException
+
+2. public void write(char[ ]) throws IOException
+
+3. public abstract void write(char[ ],int off,int len )throws IOException
+
+4. public void write(String) throws IOException
+
+5.public void write(String,int off,int len) throws IOException
+
+6. public abstract void close( ) throws IOException
+
+7. public void flush( ) throws IOException
+
+
+
+
+The "FileWriter" class
+
+Constructors:
+
+1. public FileWriter(String) throws IOException
+
+2. public FileWriter(File) throws IOException
+
+3. public FileWriter(String,boolean) throws IOException
+
+4. public FileWriter(File,boolean) throws IOException
+
+
+
+
+
+
+
+
+
+The "PrintWriter" class
+
+This class is also the derived class of Writer but has got 
+"print( )" and "println( )" methods, just like System.out. 
+These methods are overloaded and can accept any kind of argument 
+and write it in the file. 
+Thus as a programmer we don't have to convert these values into Strings.
+
+The Constructors of "PrintWriter" are:
+
+1. public PrintWriter(String)
+2. public PrintWriter(File)
+3. public PrintWriter(Writer)
+
+Methods Of "PrintWriter" are:
+1. public void println(String) throws IOException
+2. public void println(int) throws IOException
+3. public void println(float) throws IOException
+4. public void println(boolean) throws IOException
+
+like this we have methods for every primitive type
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
