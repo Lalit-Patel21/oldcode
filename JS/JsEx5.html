@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript Demo</title>
+    <script>
+        function addPara(){
+          let dv = document.querySelector("div");
+          let children = dv.children;
+          let mypera = document.createElement("p");
+          let mytext = document.createTextNode("I am pera "+(children.length + 1));
+            mypera.appendChild(mytxt);
+           dv.appendChild(mypara);
+        }
+    </script>
+</head>
+<body>
+    <div id="d1">
+        
+    </div>
+
+    
+</body>
+</html>

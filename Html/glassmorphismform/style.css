@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: black;
+
+}
+.background{
+
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    
+}
+.background .shape{
+
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    border-radius: 50%;
+    
+}
+.shape:first-child{
+   
+    left: -50px;
+    top: -80px;
+    background-image: linear-gradient(to right top, #5f5eab, #5278bf, #4990ce, #4da7d8, #60bddf, #6abfd5, #76c0cc, #84c1c4, #82aead, #7e9c98, #798a86, #737876);
+
+}
+.shape:last-child{
+
+    right: -30px;
+    bottom: -80px;
+   background-image: linear-gradient(to right top, #8d8d9d, #919ab0, #91a8c1, #8eb7d1, #89c7dd, #7ed1e3, #73dbe7, #6ce5e6, #5bebe0, #51f1d6, #52f7c8, #5ffbb7);
+
+}
+form{
+
+    height: 520px;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.13)  ;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left:50% ;
+    border-radius:10px ;
+    backdrop-filter:blur(10px) ;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    padding:50px 35px;
+
+}
+form *{
+    color: white;
+    letter-spacing: 0.5px;
+
+}

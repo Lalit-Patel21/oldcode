@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>Searching All Occurrences Of An Element</title>
+		<script>
+			let names = [];
+			let i;
+			for (i = 0; i < 5; i++) {
+				names[i] = prompt("Enter name");
+			}
+			document.write("Names are:<br>");
+			for (let x of names) {
+				document.write(`${x}<br>`);
+			}
+
+			let str = prompt("Enter name to search:");
+			let index = 0,
+				pos;
+			document.write("<br>Search Result:<br>");
+			while (true) {
+				pos = names.indexOf(str, index);
+				if (pos == -1) {
+					break;
+				}
+
+				document.write(`${str} is at pos ${pos}<br>`);
+				index = pos + 1;
+			}
+		</script>
+	</head>
+
+	<body></body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while loop demo</title>
+    <script>
+
+        let sum=0,count=0;
+        do{
+        let n = Number(prompt("Enter an number :"));
+        sum=sum+n;
+        count++;
+        }while(n!=0);
+        document.write(`Sum is ${sum}<br>`);
+        document.write(`Avg is ${sum/(count-1)}<br>`);
+ 
+    </script>
+    <!-- <script>
+        let n = Number(prompt("Enter an number :"));
+        let i=1;
+        document.write(`<h1> Table of ${n}</h1>`);
+        while(i<=10)
+        {
+            document.write(`${n}*${i}=${n*i}<br>`);
+            i++;
+        }
+
+    </script> -->
+</head>
+<body>
+
+    
+</body>
+</html>
