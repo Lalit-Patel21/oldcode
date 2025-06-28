@@ -1,0 +1,30 @@
+<web-app>
+   	<context-param>
+			<param-name>emailid</param-name>
+			<param-value>scabhopal98@gmail.com</param-value>
+	</context-param>
+	<context-param>
+			<param-name>contactno</param-name>
+			<param-value>9826012345</param-value>
+	</context-param>
+	<servlet>
+		<servlet-class>ServletOne</servlet-class>
+		<servlet-name>ServletOne</servlet-name>
+		
+			
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletOne</servlet-name>
+		<url-pattern>/ServletOne</url-pattern>
+	</servlet-mapping>
+                    <servlet>
+		<servlet-class>ServletTwo</servlet-class>
+		<servlet-name>ServletTwo</servlet-name>
+		
+			
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ServletTwo</servlet-name>
+		<url-pattern>/ServletTwo</url-pattern>
+	</servlet-mapping>
+</web-app>

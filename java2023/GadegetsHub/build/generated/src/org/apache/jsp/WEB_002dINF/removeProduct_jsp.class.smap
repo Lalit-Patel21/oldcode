@@ -1,0 +1,14 @@
+SMAP
+removeProduct_jsp.java
+JSP
+*S JSP
+*F
++ 0 removeProduct.jsp
+WEB-INF/removeProduct.jsp
+*L
+1,15:44
+16:59,3
+17,26:62
+43:88,3
+44,8:91
+*E

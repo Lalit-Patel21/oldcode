@@ -1,0 +1,6 @@
+
+classpath =D:\BASIC NEW\tomcat8.5\lib\servlet-api.jar;%classpath%;.
+
+"D:\Server Room\AphacheTomcat\lib\servlet-api.jar;%classpath%;."
+
+"D:\Server Room\AphacheTomcat\lib\jsp-api.jar;%classpath%;."
