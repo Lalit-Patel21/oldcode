@@ -1,0 +1,307 @@
+1) What is Inheritance ? Is Java Support the multiple inheritance ? If no then why.
+
+     Inheritance is very important pillars of Oops.
+     inheritance means creating something new using existing property.
+     Inheritance means acquired the features of one class into exiting class.
+     and use the property and methods of another class into our own class.
+     we use the inheritance to achieve code reusability.
+     in java inheritance we can inherit any class using the keyword "extends".
+     in which inherited class is called super class ,parent class and base class.
+     which class inherit any class is called child class, derived class.
+
+     in java we have 3 types of inheritance.
+     1.)Single inheritance 
+     2.)Multilevel inheritance
+     3.)Hierarchical inheritance
+     
+    No, Java does not support concept of Multiple inheritance and Hybrid Inheritance.
+    because of one child can not have multiple parents.
+    and we inherits multiple classes in a class then that classes have same methods 
+    and properties because of that JVM will confuse which class methods we need to      
+    called because of that ambiguity error come in our code.
+
+   
+    but we can achieve multiple inheritance using "Interface" in Java.     
+
+
+2)What is method overriding ? List down the difference between method overloading and method overriding.
+
+whenever we need to change implementation of parents class method in child class then we need to override methods in the child class.
+for method overriding we need inheritance or inherit a class in which methods are presents which we have to override. 
+
+the differences b/w overloading and overriding are given below:
+1.) in overriding we need inheritance but we can do overloading in same class.
+2.) in method overriding we have same parameter but in method overloading we can change the number of parameter.
+3.) we can achieve runtime polymorphism using method overriding but we can achieve 
+compile time polymorphism using method overloading.
+4.) we can use only co-variant return type in method overriding .
+but in method overloading return type of method is not matter.
+
+
+3) What is the role of return type in case of method overloading and method overriding?
+
+we can changes return type of method in case of method overloading.
+but in case of method overriding only co-variant return is allow of a method.
+
+co-variant return type means when we have public return type of  any method then we can not change the return of method at overriding of method at child class.
+but we can have private return type in a method then we can change the return type of 
+that method at the time of method overriding at child class we can changes private in
+<default>,protected, public.
+
+
+4) Can we Override static, private method?
+
+we can not override static, private method.
+
+private methods are those methods which are accessible only in class 
+but to override any method we have to inherit that class but using inherited any class we can not access private methods and property of that class.
+
+in case of static methods there is statement "static methods are hidden but not overridden".
+
+
+5) Create class OneBHK with instance variable roomArea , hallArea and price.
+Create default and parameterized constructor.
+Method show(): to print OneBHK data member information.
+
+class OneBHK{
+private double roomArea;
+private double hallArea;
+private int price;
+
+public OneBHK()
+{
+}
+public OneBHK(double roomArea, double hallArea, int price)
+{
+this.roomArea = roomArea;
+this.hallArea = hallArea;
+this.price    = price;
+}
+
+public void show()
+{
+System.out.println("the area of room is "+this.roomArea+"squaremeter\nthe area of hall is "+hallArea+"squaremeter\nthe price of room is "+price+"Rs");
+}
+}
+
+class UseOneBHK{
+public static void main(String [] Args){
+
+OneBHK FirstC = new OneBHK(5000,2000,250000);
+FirstC.show();
+}
+}
+
+
+6) Create another class TwoBHK which has all the properties and behaviour of OneBHK and a new instance variable room2Area.
+Create default and parameterized constructor.
+Method show(): to print all data member information.
+Write main function in another class(Say XYZ) and store three TwoBHK flat’s.information and print information using show method. Also print total amount of all flats.
+
+
+package OOPSIIasignment;
+class TwoBHK extends OneBHK{
+    private double room2Area;
+    private static int totalAmount;
+
+    public TwoBHK(double roomArea,double room2Area,double hallArea,int price)
+    {
+        super(roomArea,hallArea,price);
+        this.room2Area=room2Area;
+        totalAmount=  totalAmount+ price;
+    }
+    public TwoBHK()
+    {
+        super(0,0,0);
+    }
+    public void show()
+    {
+        System.out.println("the area of room1 is "+this.getRoomArea()+" Squarmeters\nthe area of room2 is " +this.room2Area+" Squarmeters\nthe area of hall is "+this.getHallArea()+" Squarmeters\nthe price of room is "+this.getPrice()+" Rs.");
+    }
+    public static void showTotalAmount(){
+        System.out.println("The total Price of all the flats are "+totalAmount+" Rs.");
+    }
+
+}
+public class UseTwoBHK{
+    public static void main(String [] args){
+
+        TwoBHK Flat1C = new TwoBHK(1000.0,2000.0,25000.0,1000);
+        Flat1C.show();
+        TwoBHK Flat2C = new TwoBHK(1000.0,2000.0,25000.0,1000);
+        Flat2C.show();
+        TwoBHK Flat3C = new TwoBHK(1000.0,2000.0,25000.0,1000);
+        Flat3C.show();
+        TwoBHK.showTotalAmount();
+    }
+}
+
+
+
+7) Create three classes  Faculty  (facultyid, salary), FullTimeFaculty  (basic, allowance) inherits class Faculty, PartTimeFaculty  (hour, rate) inherits class Faculty. 
+ Create   a   method   for   accepting   input   in   FullTimeFaculty       and  PartTimeFaculty,  but   salary  should   not   be   accepted.    salary   is  calculated   on   the   basis   of   (basic+allowance)   for   FullTimeFaculty   and  (hour*rate)   for   PartTimeFaculty.   Also   create   method   in   above   classes   to  display faculty data. 
+ Create   another   class(say   XYZ)   for   main   method   and   store   2 fulltime and 2 parttime faculty information. Also print their details. 
+
+
+
+8) Create a class Student with two members : rollno and percentage.
+	Create default and parameterized constructors. Create method show() to 	display information.
+	Create another class CollegeStudent inherits Student class. Add a new membersemester to it. Create default and parameterized constructors. Also override show() method.
+	Create another class SchoolStudent inherits Student class. Add a new member (eg 12 th ,10 th etc.) to it. Create default and parameterized 	constructors. Also override show() method.
+	Create a class(say XYZ) with main method that carries out the operation of the project :
+has array to store objects of any class(Student or CollegeStudent, SchoolStudent).
+create two CollegeStudent and three SchoolStudent record objects and store them inside the array.
+display all record from the array.
+search record on the basic of rollno and check given rollno is of SchoolStudent or of CollegeStudent.
+count how many students are having A grade,if for A grade percentage >75.
+
+
+
+9) What is abstract class?. What is interface? Differentiate abstract class and interface.
+
+
+
+
+10) Write down difference b/w abstract class and jdk1.8 interface.
+
+
+
+11) Create an Abstract class Processor with int member variable data and method showData to display data value.
+Create abstract method process() to define processing of member data.
+Create a class Factorial using abstract class 	Processor to calculate  and print 	factorial of a number by overriding the process method.
+Create a class Circle using abstract class Processor to calculate and print area of a circle by overriding the process method Ask user to enter choice (factorial 	or circle area). Also ask data to work upon; Use Processor class reference to achieve this mechanism.
+
+
+
+
+12) Create Interface Taxable with members salesTax=7% and incomeTax=10.5%. 	Create abstract method calcTax().
+Create class Employee(empId,name,salary) and implement Taxable to calculate incomeTax on yearly salary.
+Create class Product(pid,price,quantity) and implement Taxable to calculate salesTax on unit price of product.
+Create class for main method(Say XYZ), accept employee information and a product information from user and print income tax and sales tax respectively.
+
+
+
+
+
+13) Explain the importance of toString() and equals() method of the Object class and override them on class Employee (empId,name,salary).
+Create class for main method(say XYZ),and accept five employees information and store in an array. Also ensure if entered empId already exist or not (use equals method).
+Display all employee info using toString() method.
+14) What is the difference b/w jdk1.7 and jdk1.8 interface. Explain jdk1.8 new changes for interface with example.
+
+
+class employees{
+public String toString()
+{
+system.out.println("empo");
+
+}
+employess e = new employee();
+
+system.out.println(e);
+system.out.println(e.toString);
+
+
+
+
+15) Explain functional interface, predicate, lambda expression, method reference and constructor reference with example.
+
+Java-8
+
+●	Lambda Expression
+●	Functional Interface
+●	Stream API
+●	Default method in interface
+●	Static method in interface
+●	Optional class
+●	Collectors class
+●	ForEach() Method/Loop
+●	Parallel array sorting
+●	Method,constructor references- ::
+●	So -on….
+
+Need of java8
+-	Concise and minimal code
+-	Add features of functional programming
+-	More compatible code with multi-core processor
+
+
+
+ 
+Lambda Expression-
+Anonymous function
+-	Not having name
+-	Not having return type
+-	Not having modifier
+-	 -> needs to be added
+Cleaning rules-
+I.	If body have just one statement then we can remove {}
+II.	Use type inference, compiler guess the situation and context
+III.	No return keyword
+IV.	If only one parameter remove small brackets
+
+Example1- 
+Private void add(int a,int b)
+{
+SOP(a+b)
+}
+Cleaned lambda expression
+(a,b)->SOP(a+b);
+
+Example 2-
+Private int getstrlength(String str)
+{
+Return str.length();
+}
+Cleaned lambda expression
+ str->str.length();
+
+ 
+Benefits-
+1.To enable functional programming
+2.To make code more readable,maintainable and concise code
+3. To enable parallel processing
+4.Reduce jar file size
+5. Eliminate unnecessary variables
+public class LambdaMathExample {
+    public static void main(String[] args) {
+        // Lambda expression for addition
+        MathOperation add = (a, b) -> a + b;
+        
+        // Lambda expression for subtraction
+        MathOperation subtract = (a, b) -> a - b;
+
+        // Perform addition
+        System.out.println("5 + 3 = " + operate(5, 3, add));
+
+        // Perform subtraction
+        System.out.println("5 - 3 = " + operate(5, 3, subtract));
+    }
+
+    // Functional interface for math operations
+    interface MathOperation {
+        int operate(int a, int b);
+    }
+
+    // Method to perform operation using lambda expression
+    private static int operate(int a, int b, MathOperation operation) {
+        return operation.operate(a, b);
+    }
+}
+
+
+
+
+
+
+
+16)  Create a program that helps banks to maintain records. It should havefollowing facilities.
+Anybody can create current or saving account with following initial information:account number, name, balance, and branch.
+display account detail for a particular accounts.
+display total money deposited in bank.
+allow deposit and withdrawal in an account .
+for saving account opening balance and minimum balance must be 5000.
+for current account opening balance and minimum balance must be 1000.
+can not withdraw the amount from the account that makes balance less than the minimum balance.
+
+
+

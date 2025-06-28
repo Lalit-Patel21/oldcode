@@ -1,0 +1,2049 @@
+public class Pattern
+{
+public static void main(String [] args)
+{
+
+for(int i = 5; i >= 1; i--)
+{
+for(int j = 5; j >= i; j--)
+{
+System.out.print(j);
+}
+System.out.println();
+}
+}
+}
+
+
+public class Pattern{
+    public static void main(String [] args){
+        
+    for(int i =1;i<=6;i++)
+    {
+      for(int j=1;j<=3;j++)
+      {
+        if(i==1||i==3||j==1||j==3)
+        {
+         System.out.print("* ");
+        }
+        else
+        {
+          System.out.print("  ");
+        }
+     }
+      System.out.println();
+ }
+}
+}
+
+public class StringCompare{
+    
+    public static void main(String [] args){
+
+    String s1 = new String("Stephen Edwin King");
+    String s2 = new String("Walter Winchell");
+    //String s3 = new String("");
+    System.out.println(s1.equals(s2));
+}
+}
+
+class StringContains {
+    public static void main(String[] args) {
+        
+    String myStr = "Hello";
+    System.out.println(myStr.contains("Hel"));   // true
+    System.out.println(myStr.contains("e"));     // true
+    System.out.println(myStr.contains("Hi"));  //false
+    }
+}
+
+public class SmallestAndSecondSmallest{
+  public static void main(String [] args){
+        
+    int [] arr=new int[]{4,6,2,1,8};
+    int Min = Integer.MAX_VALUE;
+    int secMin=Integer.MAX_VALUE;
+    for(int i =0;i<arr.length;i++)
+    {
+        if(arr[i]<Min)
+        {
+            secMin=Min;
+            Min=arr[i];   
+        }
+       else if((arr[i]<secMin)&&(arr[i]!=Min))
+       {
+        secMin=arr[i];
+        }
+    }
+    System.out.println(Min);
+    System.out.println(secMin);
+}
+}
+
+
+  
+public class MacProd{
+    public static void main(String [] args){
+        
+    int [] nums = {2,3,5,7,-7,5,8,-5};
+    int multi = Integer.MIN_VALUE,P1=0,P2=0;
+   
+    for(int i =0;i<nums.length-1;i++)
+    {
+        for(int j=i+1;j<nums.length;j++)
+        {
+        if(multi<(nums[i]*nums[j]))
+        {
+           multi=nums[i]*nums[j];
+           P1=nums[i];
+           P2=nums[j];
+        }
+     }
+    }
+    System.out.println("Pair("+P1+","+P2+")");
+    System.out.println(multi);
+}
+}
+
+
+
+public class LeaderElement {
+    public static void main(String[] args) {
+        int []arr = new int[]{16,17,3,4,5,7};
+
+        for (int i =0;i<arr.length-1;i++)
+        {
+            for (int j = i+1;j<arr.length;j++)
+            {
+                if(arr[i]<arr[j])
+                {
+                    break;
+                }
+                if(j==arr.length-1)
+                  System.out.print(arr[i]+" ");
+            }
+           
+        }
+          System.out.print(arr[arr.length-1]+" ");
+    }
+}
+
+public class LeaderElement {
+    public static void main(String[] args) {
+        int []arr = new int[]{16,17,3,4,5,7};
+
+        for (int i =0;i<arr.length-1;i++)
+        {
+            Boolean flag = true;
+            for (int j = i+1;j<arr.length;j++)
+            {
+                if(arr[i]<arr[j])
+                {
+                  flag = false;
+                    break;
+                }
+                if(flag)
+                  System.out.print(arr[i]+" ");
+            }
+           
+        }
+          System.out.print(arr[arr.length-1]+" ");
+    }
+}
+
+
+public class Pattern {
+    public static void main(String[] args) {
+     
+       int k;
+        for (int i =1;i<=5;i++)
+        {
+            k = i;
+            for (int j = 1;j<=2*i-1;j++)
+            {
+                if(j<=i)
+                {
+                 System.out.print(j+" ");   
+                }
+                else{
+                     System.out.print(--k+" ");  
+                }
+                 
+            }
+           System.out.println(); 
+        }
+         
+    }
+}
+
+public class Pattern {
+    public static void main(String[] args) {
+        int i ,j;
+        for (i =1;i<=5;i++)
+        {
+            for (j = 1;j<=i;j++)
+            {
+                 System.out.print(j+" ");   
+            }
+            for(int k=i-1;k>=1;k--)
+            {
+                System.out.print(k+" ");  
+            }
+           System.out.println(); 
+        }
+         
+    }
+}
+
+// Java program to swap two strings without using a temporary variable. 
+
+import java.util.*; 
+  
+class Swap 
+{     
+    public static void main(String args[]) 
+    { 
+        // Declare two strings 
+        String a = "Hello"; 
+        String b = "World"; 
+          
+        // Print String before swapping 
+        System.out.println("Strings before swap: a = " +  
+                                       a + " and b = "+b); 
+          
+        // append 2nd string to 1st 
+        a = a + b; 
+          
+        // store initial string a in string b 
+        b = a.substring(0,a.length()-b.length()); 
+          
+        // store initial string b in string a 
+        a = a.substring(b.length()); 
+          
+        // print String after swapping 
+        System.out.println("Strings after swap: a = " +  
+                                     a + " and b = " + b);         
+    }     
+} 
+
+Output
+Strings before swap: a = Hello and b = World
+Strings after swap: a = World and b = Hello
+
+
+
+
+
+
+
+   int []A = new int[]{9, 3, 5, 6, 2, 8, 10};
+
+   for(int ele : A)
+   {
+     System.out.print(ele +" ");
+   }
+   System.out.println();
+
+    
+   int val=10,i;
+   boolean flag = false;
+   for(i=0;i<A.length;i++)
+   {
+     if(A[i]==val)
+     {
+      flag = true;
+      break;
+     }
+   }
+
+   if(flag)
+     System.out.println("Element found at index "+i);
+   else
+     System.out.println("Element not Found");
+
+
+
+      int []A = new int[]{9, 3, 5, 6, 2, 8, 10};
+
+   for(int ele : A)
+   {
+     System.out.print(ele +" ");
+   }
+   System.out.println();
+
+    
+   int val=10,i;
+
+   for(i=0;i<A.length;i++)
+   {
+     if(A[i]==val)
+     {
+      break;
+     }
+   }
+
+   if(i!=A.length)
+     System.out.println("Element found at index "+i);
+   else
+     System.out.println("Element not Found");
+}
+}
+
+class HelloWorld {
+    public static void main(String[] args) {
+        for(int i = 5;i>=1;i--)
+        {
+            int k=1;
+            for(int j=1;j<=5;j++)
+            {
+                if(j<i)
+                 System.out.print(" ");
+                else
+                 System.out.print(k++);
+            }
+            System.out.println();
+        }
+    }
+}
+
+  for(int i = 0;i<5;i++)
+        { 
+            int num = 1;
+            for(int j=0;j<=i;j++)
+            {
+               System.out.print(num);
+               num=num*(i-j)/(j+1);
+              
+            }
+            System.out.println();
+        }
+
+ for(int i = 0;i<5;i++)
+        { 
+            int num = 1;
+            for(int k = 4;k>i;k--)
+              System.out.print(" ");
+            for(int j=0;j<=i;j++)
+            {
+               System.out.print(num);
+               num=num*(i-j)/(j+1);
+            }
+            System.out.println();
+        }
+
+
+ for(int i = 0;i<5;i++)
+ { 
+            int num = 1;
+            for(int k = 0;k<5-i;k++)
+              System.out.print(" ");
+            for(int j=0;j<=i;j++)
+            {
+               System.out.print(num+" ");
+               num=num*(i-j)/(j+1);
+            }
+            System.out.println();
+        }
+
+
+
+// JAVA program to count occurrences
+// of a character
+
+class GFG
+{
+	// Method that return count of the given
+	// character in the string
+	public static int count(String s, char c)
+	{
+		int res = 0;
+
+		for (int i=0; i<s.length(); i++)
+		{
+			// checking character in string
+			if (s.charAt(i) == c)
+			res++;
+		} 
+		return res;
+	}
+	
+	// Driver method
+	public static void main(String args[])
+	{
+		String str= "geeksforgeeks";
+		char c = 'e';
+		System.out.println(count(str, c));
+	}
+}
+
+
+
+ String s = "abc";
+ for(int i=0;i<s.length();i++)
+ {
+   for(int j=i+1;j<=s.length();j++)
+   {
+      System.out.println(s.substring(i,j));
+   }     
+}
+
+
+
+
+Q1. Find the majority element in array.
+
+(A majority element in an array is an element that appears more than n/2 times where n is the size of the array.)
+
+public class MajorityElement {
+    public static int findMajorityElement(int[] arr) {
+        int candidate = arr[0];
+        int count = 1;
+
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] == candidate) {
+                count++;
+            } else {
+                count--;
+            }
+
+            if (count == 0) {
+                candidate = arr[i];
+                count = 1;
+            }
+        }
+
+        // Verify if the candidate is actually a majority element
+        count = 0;
+        for (int num : arr) {
+            if (num == candidate) {
+                count++;
+            }
+        }
+
+        if (count > arr.length / 2) {
+            return candidate;
+        } else {
+            return -1; // No majority element
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {2, 2, 1, 1, 2, 2, 2};
+        int majorityElement = findMajorityElement(arr);
+        if (majorityElement != -1) {
+            System.out.println("Majority element: " + majorityElement);
+        } else {
+            System.out.println("No majority element found");
+        }
+    }
+}
+
+
+
+
+public class MajorityEle{
+ public static void main(String [] args)
+ {
+   int []arr=new int[]{4,2,3,2,4,2,2,2};
+   
+   int count,c=1,large=0,n=arr.length/2;
+   if(n%2==1)
+    n++;   
+   Boolean flag;
+   for(int i=0;i<arr.length-1;i++)
+   {
+     count=1;
+     flag=true;
+     for(int j=0;j<i;j++)
+     {
+        if(arr[i]==arr[j])
+        {
+          flag=false;
+        }
+     }
+     if(flag)
+     {
+     for(int k=i+1;k<arr.length;k++)
+     {
+       if(arr[i]==arr[k])
+        count++;
+     } 
+     }
+     if(count>c)
+     {
+      c=count;
+      large=arr[i];
+     
+     }
+
+   }
+  if(c>n)
+    System.out.println("Majority element "+large+" occurrence "+c+" times");
+  else 
+     System.out.println("do not have any Majority element in array");
+ }
+}
+
+
+Q2.Java Program To Find Two Elements whose Sum is Closest to Zero.
+( Two elements in a given array of positive  and negative numbers such that their sum is close to zero.)
+for example- taking array   {-2,-1,3,6,5}
+output:  -2 and 3
+
+import java.util.Arrays;
+
+public class ClosestSumToZero {
+    public static void findClosestSum(int[] arr) {
+        Arrays.sort(arr);
+        int left = 0, right = arr.length - 1;
+        int minSum = Integer.MAX_VALUE;
+        int minLeft = left, minRight = right;
+
+        while (left < right) {
+            int sum = arr[left] + arr[right];
+
+            if (Math.abs(sum) < Math.abs(minSum)) {
+                minSum = sum;
+                minLeft = left;
+                minRight = right;
+            }
+
+            if (sum < 0) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+        System.out.println("The two elements whose sum is closest to zero are: " + arr[minLeft] + " and " + arr[minRight]);
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {-2, -1, 3, 6, 5};
+        findClosestSum(arr);
+    }
+}
+
+
+public class ClosestToZero{
+ public static void main(String [] args)
+ {
+   int []arr=new int[]{-2,-1,3,5,6};
+   
+   int sum=0,min=arr[0]+arr[1],a=0,b=1;
+   if(min<0)
+   min*=-1;
+  
+   for(int i=0;i<arr.length-1;i++)
+   {
+     for(int j=i+1;j<arr.length;j++)
+     {
+       sum=arr[i]+arr[j];
+       if(sum<0){
+          sum*=-1;
+        }
+        if(min>sum){
+          min=sum;
+          a=arr[i];
+          b=arr[j];
+       }
+      }  
+     }
+   System.out.println("pair : ("+a+" "+b+")");
+   System.out.println(min);
+ }
+}
+
+Q3.  To check the number is facinating number or not. 
+(A fascinating number is a number that, when multiplied by 2 and 3, 
+results in a concatenation of the original number and its products (in any order), 
+containing all digits from 1 to 9 exactly once. For example, the number 192 is a fascinating number because:
+192 * 1 = 192
+192 * 2 = 384
+192 * 3 = 576
+Concatenating the results: 192384576 contains all digits from 1 to 9 exactly once.)
+
+public class FascinatingNumber {
+    public static boolean isFascinating(int num) {
+        String concatenated = "" + num + (num * 2) + (num * 3);
+        if (concatenated.length() != 9) {
+            return false;
+        }
+
+        for (char ch = '1'; ch <= '9'; ch++) {
+            if (concatenated.indexOf(ch) == -1 || concatenated.lastIndexOf(ch) != concatenated.indexOf(ch)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int num = 192;
+        if (isFascinating(num)) {
+            System.out.println(num + " is a Fascinating Number");
+        } else {
+            System.out.println(num + " is not a Fascinating Number");
+        }
+    }
+}
+
+
+Q4. Permutation of string.
+
+public class pt {
+  public static void main(String args[]) {
+    String string = "abcd";
+    char[] str = string.toCharArray();
+
+    for (int i = 0; i < str.length; i++) {
+     for (int j = 0; j < str.length; j++) {
+       for (int k = 0; k < str.length; k++) {
+        for (int l = 0; l < str.length; l++) {
+                
+          if (i != j && j != k && k != l && i != k && i != l && j != l) {
+              System.out.println(str[i] + "" + str[j] + "" + str[k] + "" + str[l]);
+                        }
+                    }
+                }
+            }
+         }
+    }
+}
+
+public class pt {
+ public static void main(String args[]){
+  String string="abcd";
+  char[] str=string.toCharArray();
+
+  for(int i=0;i<str.length;i++){
+   for(int j=0;j<str.length;j++){
+    System.out.println(str[j]+""+str[(j+1)%4]+""+str[(j+2)%4]+""+str[(j+3)%4]);
+  }
+  char temp=str[i];
+  str[i]=str[str.length-i-1];
+   str[str.length-i-1]=temp;
+  }
+ }
+}
+    
+Q5. WAP To  Convert a String to an Integer .
+for example-
+Input-"56789"
+Output-56789.
+
+public class Pattern1{
+  public static void main(String []args){
+     String s = "45678";
+     for(int i = 0 ; i <s.length(); i++){
+        char c =s.charAt(i);
+        int multi =(int)c;
+        int value = multi-48;
+        System.out.print(value);
+}
+
+
+
+Q6.
+3 3 3 3 3
+3 2 2 2 3 
+3 2 1 2 3
+3 2 2 2 3
+3 3 3 3 3
+
+for(int i=1;i<=5;i++)
+{
+  for(int j=1;j<=5;j++)
+   {
+     if((i>1&&i<5)&&(j>1&&j<5)) 
+        if(i==3&&j==3)
+           System.out.print("1");
+        else 
+           System.out.print("2");
+      else
+         System.out.print("3");
+     }  
+     System.out.println();
+ }
+
+
+
+ 
+
+
+
+
+Q1. Write a Java program to find common elements between two arrays (string values).
+
+String []s={"Hii","World","java","python"};
+    String []s1={"Hello","Sya","World"};
+    for(int i=0;i<s.length;i++)
+    {
+        for(int j=0;j<s1.length;j++)
+        {
+            if(s[i].equals(s1[j]))
+            {
+                System.out.println(s[i]);
+            }
+        }
+    }
+
+
+
+Q2. Sorting Strings using Bubble Sort.
+public class BubbleSort{
+ public static void main(String [] args){
+   
+   String str="HelloWorld";
+   for(int i =0;i<str.length();i++)
+   {
+     for(int j = 0;j<=arr)
+   
+   }
+  }
+}
+
+Q.3.Write a Java program to find all pairs of elements in an array whose sum is equal to a specified number.
+
+Q4.Write a Java program to find a missing number in an array.
+ public static void main(String[] args) {
+    int [] arr ={2,4,6,12,14};
+    int a=2;
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]!=a)
+            {
+                System.out.println("m: "+a);
+                i--;
+            }
+            a=a+2;
+         
+        }
+    }
+
+Q5.Write a Java program to check if an array of integers is without 0 and -1.
+
+
+Q6.Write a Java program to replace a specified character with another character.
+Sample Output:  Original string: The quick brown fox jumps over the lazy dog.                                                
+                New String: The quick brown fox jumps over the lazy fog.
+
+
+Q7.  
+*                  *
+**                **
+***              ***
+****            ****
+*****          *****
+******        ******
+*******      *******
+********    ********
+*********  *********
+********************
+
+ for(int i=1;i<=10;i++)
+{
+ 
+for(int j=1;j<=20;j++)
+ {
+   if((i>=j)||(j>(20-i)))
+        System.out.print("*");
+    else
+        System.out.print(" ");
+  }
+  System.out.println();
+}
+
+
+class HelloWorld {
+    public static void main(String[] args) {
+       int k = 20;
+        for(int i=1;i<=10;i++){
+         for(int j=1;j<=20;j++)
+          {
+              if(i>=j)
+               System.out.print("*");
+               else if(j>=k){
+              System.out.print("*");
+               }
+              else
+               System.out.print(" ");
+          }
+          System.out.println();
+          k--;
+        }
+    }
+}
+
+Q8.          
+1
+1*3
+1*3*5
+1*3*5*7
+1*3*5*7*9
+class HelloWorld {
+    public static void main(String[] args) {
+        for(int i=1;i<=5;i++){
+         for(int j=1;j<=i*2-1;j++)
+          {
+              if(j%2==0)
+               System.out.print("*");
+               else
+              System.out.print(j);
+          }   
+          System.out.println();
+       }
+    }
+}
+
+
+
+
+Q1. Check if Two Strings Are Anagrams.
+public class Anagram{
+public static void main(String [] args){
+String s1="From",s2="Farm";
+boolean flag=true;
+char []ch1=s1.toCharArray();
+char []ch2=s2.toCharArray();
+if(s1.length()!=s2.length())
+  System.out.println("Not an Anagram");
+else{
+ for(int i=0;i<ch1.length;i++)
+ {
+   for(int j=0;j<ch2.length;j++)
+   {
+    if(ch1[i]==ch2[j])
+    {
+      ch1[i]='_';
+      break;
+    }
+   }
+ }
+}
+for(int i=0;i<ch1.length;i++)
+{
+ if(ch1[i]!='_')
+ {
+  System.out.println("No Anagram");
+  flag=false;
+  break;
+  }
+}
+if(flag)
+{
+   System.out.println("Anagram");
+}
+}
+}
+
+Q2. Find the Longest Substring Without Repeating Characters.
+public class  LongestSubString{
+ public static void main(String [] args){
+  
+ String str = "ABCAABDCBC",temp="",ans="";
+ int i,j,max=0;
+ for(i=0;i<str.length();i++)
+ {
+     temp=""+str.charAt(i);
+     for(j=i+1;j<str.length();j++)
+     {
+         if((str.charAt(i)!=str.charAt(j))&&(!temp.contains(""+str.charAt(j))))
+         {
+             temp=temp+str.charAt(j);
+         }
+         else{
+             break;
+         }
+     }
+ if(max<temp.length()){
+     max=temp.length();
+     ans=temp;
+ }
+ temp="";
+}
+ System.out.println(max);
+ System.out.println(ans);
+ }
+}
+
+
+Q3. Rotate an Array.(Write a program to rotate the elements of an array to the right by k positions.)
+public class RotateArray{
+ public static void main(String [] args){
+  int []arr={1,2,3,4,5,6};
+  int k=2,n=1,temp;
+  while(n<=k)
+  {
+    for(int i=0;i<arr.length-1;i++)
+    {
+    temp=arr[i];
+    arr[i]=arr[i+1];
+    arr[i+1]=temp;
+   }
+   n++;
+  }
+  for(int e : arr)
+   System.out.print(e +" ");
+ }
+}
+Q4. Write a program to merge two sorted arrays into a single sorted array without using any extra space.
+public class MergeTwoSortedArray{
+ public static void main(String [] args){
+  int []arr1={2,4,8,11,13,16};
+  int []arr2={3,6,7,9,10,14};
+  int []arr3=new int[arr1.length+arr2.length];
+
+  for(int i=0;i<arr1.length;i++)
+  {
+    arr3[i]=arr1[i];
+  }
+
+   for(int i=arr1.length,j=0;i<arr3.length;i++)
+  {
+    arr3[i]=arr2[j++];
+  }
+  for(int i=0,temp;i<arr3.length-1;i++)
+  {
+   for(int j=i+1;j<arr3.length;j++)
+    if(arr3[i]>arr3[j])
+    {
+    temp=arr3[i];
+    arr3[i]=arr3[j];
+    arr3[j]=temp;
+    }
+  }
+  for(int e : arr3)
+   System.out.print(e +" ");
+ }
+}
+
+
+
+Q5. Write a program to check if a given string contains only numeric digits
+
+public class StringWithOnlyDigit{
+ public static void main(String []args)
+ {
+  String str = "12345";
+  boolean flag = false;
+  char ch[] = str.toCharArray();
+  for(int i=0;i<ch.length;i++)
+  {
+    if(ch[i]>='0' && ch[i]<='9')
+    {
+     flag=true;
+    }
+    else{
+    flag=false;
+    break;
+   }
+  }
+ if(flag)
+ {
+   System.out.println("Integer Value In String");
+
+ }
+ else{
+   System.out.println("Another character In String");
+  }
+ }
+}
+
+
+
+Q.1 Write a java  program to find and print prime numbers in a given Array.
+public class FindPrimeInArray{
+ public static void main(String [] args){
+    int []arr = {5,7,3,6,8,11,2,51};
+    Boolean flag;
+    for(int i = 0;i<arr.length;i++)
+    {  
+      flag=true;
+      for(int j=2;j<arr[i];j++)
+      {
+        if(arr[i]%j==0){
+         System.out.println("non-Prime Number : "+arr[i]);
+         flag=false;
+         break;
+        }
+      }
+      if(flag)
+      {
+        System.out.println("Prime Number : "+arr[i]);
+      }
+    }
+  }
+}
+
+Q2. There are two arrays object one containing 100 elements and another containing 50 elements. Both are the same data types. Can we assign one Array to another Array.
+
+Yes, you can assign one array to another array in Java if both arrays are of the same data type. However, when you assign one array to another, you are not copying the elements; instead, you are copying the reference to the array. This means that both array variables will refer to the same array in memory.
+
+Here's an example:
+
+java
+Copy code
+int[] array1 = new int[100];
+int[] array2 = new int[50];
+
+// Assign array2 to array1
+array1 = array2;
+
+// Now both array1 and array2 refer to the same array of 50 elements
+After this assignment, array1 will reference the same array as array2, which has 50 elements. The original 100-element array that array1 referenced before the assignment will no longer be referenced by array1.
+
+
+
+1. What is String in Java.
+ans- String is a predefined Final, immutable class in java;
+
+2.How to declare a string in Java?
+we can declare any String in java by two types.
+
+3.Explain String pool in Java.
+
+4.Is String immutable or final in Java? If so, then what are the benefits of Strings being Immutable?
+
+5.State the difference between String and StringBuffer.
+
+6.In Java, how can two strings be compared?
+
+7.What is the difference between str1 == str2 and str1.equals(str2)?
+Is it possible to compare Strings using the == operator? If so, what is the risk involved?
+
+Program 1: write a program input a string and count and display number of vowels present in the string
+Sample Input: Computer World
+Sample Output: The Number of vowels: 4
+public class NoOfVowelInString{
+ public static void main(String []args){
+  String myStr= "computer science";
+  
+  char []ch = myStr.toCharArray();
+  int count =0;
+  for(int i=0;i<ch.length;i++)
+  {
+     switch(ch[i])
+      {
+       case 'a': case'e': case'i':case 'o':case 'u':  
+           count++;
+      }
+      
+  }
+   System.out.print(count);
+ }
+}
+
+
+Program 2: Write a program to accept a String in lower case and replace 'e' with * in the given
+String. Display the new String.
+Sample Input:computer science
+Sample Output: comput*r sci*nc*
+
+public class ReplaceCharInStr{
+ public static void main(String []args){
+  String myStr= "computer science";
+  System.out.println(myStr.replace('e', '*'));
+  
+  char []ch = myStr.toCharArray();
+  for(int i=0;i<ch.length;i++)
+  {
+      if(ch[i]=='e')
+      {
+          ch[i]='*';
+      }
+  }
+  for(char ch1:ch)
+   System.out.print(ch1);
+ }
+}
+
+Program 3: Write a program in Java to accept a word /a String and display the new string after removing all the vowels present in it.
+Sample Input: COMPUTER APPLICATIONS
+Sample Output: CMPTR PPLCTNS
+public class OnlyConsonantInString{
+ public static void main(String []args){
+  String myStr= "COMPUTER APPLICATIONS";
+  
+  char []ch = myStr.toCharArray();
+  for(int i=0;i<ch.length;i++)
+  {
+     switch(ch[i])
+      {
+       case 'A': case'E': case'I':case 'O':case 'U':  
+           break;
+       default:
+           System.out.print(ch[i]);
+       }
+   }
+ }
+}
+
+Program 4: write a program to a accept a string and display: 
+i. The number of lower case characters 
+ii. The number of uppercase character 
+iii. The number of special case characters
+iv. The number of digits present in the string
+
+Sample Input: S.T.D code of New Delhi – 011
+Sample Output : The number of lower case characters =12 
+The number of lowerupper =5 
+The number of special case characters =9 
+The number of digits present in the string =3
+
+public class TypesOfCharPresentInString{
+ public static void main(String []args){
+  String myStr= "S.T.D code of New Delhi - 011";
+  char []ch = myStr.toCharArray();
+  int lwrCase=0,uprCase=0,spChar=0,digit=0;
+  for(int i=0;i<ch.length;i++)
+  {
+     if((ch[i]>=97)&&(ch[i]<=122))
+       lwrCase++;
+     else if((ch[i]>=65)&&(ch[i]<=90))
+       uprCase++;
+     else if((ch[i]>=48)&&(ch[i]<=57))
+      digit++;
+     else
+       spChar++;
+   }
+   
+     System.out.println("Lower case : "+lwrCase);
+     System.out.println("Upper case : "+uprCase);
+     System.out.println("digits  : "+digit);
+     System.out.println("Special character : "+spChar);
+ }
+}
+
+
+Program 5: Write a program to accept a string and change the case of each letter of the string. Display the new string. 
+Sample Input: WelComE TO School 
+Sample Output: wELcOMe to sCHOOL
+
+public class ChangeCharPresentInString{
+ public static void main(String []args){
+  String myStr= "WelComE TO School";
+  char []ch = myStr.toCharArray();
+  for(int i=0;i<ch.length;i++)
+  {
+     if((ch[i]>=97)&&(ch[i]<=122))
+     {
+        int index=(int)ch[i]-32;
+        ch[i]=(char)index;
+     }
+     else if((ch[i]>=65)&&(ch[i]<=90))
+     {
+        int index=(int)ch[i]+32;
+        ch[i]=(char)index;
+     }
+    //  else
+    //      System.out.println(ch[i]);
+   }
+   for(char ch1 : ch)
+   {
+      System.out.print(ch1);
+   }
+ }
+}
+
+
+Program 6: Write a program in Java to accept a name (Containing three words) and Display only the initials (i.e., first letter of each word). 
+Sample Input: LAL KRISHNA ADVANI 
+Sample Output: L K A
+
+public class FirstCharOfWord{
+ public static void main(String []args){
+  String myStr= "LAL KRISHNA ADVANI";
+  char []ch = myStr.toCharArray();
+  System.out.print(ch[0]);
+  for(int i=0;i<ch.length;i++)
+  {
+     if(ch[i]==' ')
+     {
+       System.out.print(" "+ch[i+1]);
+     }
+   }
+ }
+}
+
+public class FirstCharOfWord{
+ public static void main(String []args){
+  String myStr= "LAL KRISHNA ADVANI";
+  String str=""+myStr.charAt(0);
+  for(int i=1;i<ch.length-1;i++)
+  {
+     if(myStr.charAt(i-1)==' ')
+     {
+       str=""+myStr.charAt(i);
+     }
+   }
+   System.out.print(str);
+ }
+}
+
+public class FirstCharOfWord{
+ public static void main(String []args){
+  String myStr= "LAL KRISHNA ADVANI";
+  String str=myStr.charAt(0)+"";
+  for(int i=1;i<str.length();i++)
+  {
+     if(myStr.charAt(i-1)==' ')
+     {
+       str=" "+myStr.charAt(i);
+     }
+   }
+   System.out.print(str);
+ }
+}
+
+
+Program 7: Write a program to input a word and check whether it is a palindrome word or not. (A word is said to be Palindrome, if the new word formed after reversing the letters is the same as the original word)
+
+
+Sample Input: madam 
+Sample Output: madam 
+
+public class PalindromeString{
+ public static void main(String []args){
+  String myStr= "madam";;
+  int left=0,right=myStr.length()-1;
+  boolean flag=true;
+  while(left<right)
+  {
+     if(myStr.charAt(left)!=myStr.charAt(right))
+     {
+       flag=false;
+       break;
+     }
+      right--;
+      left++;
+  }
+  if(flag)
+     System.out.print(myStr+" is Palindrome String");
+  else
+     System.out.print(myStr+" is not a Palindrome String");
+ }
+}
+
+
+
+Q1.Write a Java program to convert an array to an ArrayList.
+
+import java.util.ArrayList; 
+public class ConvertArrToArrList{
+ public static void main(String [] Args){
+   
+   int []arr=new int[]{3,5,7,8,9,11};
+   ArrayList<Integer> al = new ArrayList<>();
+   
+   for(int i=0;i<arr.length;i++)
+   {
+     al.add(arr[i]);
+   }
+   System.out.println(al);
+ }
+}
+
+Q2.Write a Java program to test two arrays' equality.
+
+import java.util.*; 
+public class TestTwoArraysEquality{
+ public static void main(String [] args){
+   
+   int []arr1=new int[]{3,11,5,7,2,8,9,}; 
+   int []arr2=new int[]{5,3,9,8,7,2,11};
+     
+   boolean  flag=false;
+   if(arr1.length!=arr2.length)
+   {
+     System.out.println("Two Arrays are not equal");
+   }
+   for(int i=0;i<arr1.length;i++)
+   {
+     flag=false;
+     for(int j=0;j<arr2.length;j++)
+     { 
+        if(arr1[i]==arr2[j])
+        {
+           flag=true;
+            break; 
+        }
+     }
+   if(!flag)
+    {
+     System.out.println("Two Arrays are not equal");
+     break;
+    }
+   }
+   if(flag)
+    System.out.println("Two Array are Equal");
+ }
+}
+
+Q3.Write a Java program to find common elements in three sorted (in non-decreasing order) arrays.   
+
+public class CommonElement{
+ public static void main(String [] args){
+ 
+  int []arr1=new int[]{2,3,6,7,9,13,14}; 
+  int []arr2=new int[]{4,5,8,10,16,15,18};
+  boolean flag = false;
+  for(int i=0;i<arr1.length;i++)
+  {
+   for(int j=0;j<arr2.length;j++)
+    {
+     if(arr1[i]==arr2[j])
+     {
+       System.out.println("Common Element in 2 sorted Array :"+arr1[i]);
+        flag = true;
+  
+     }
+    }
+   }
+if(!flag)
+    System.out.println("Not Common Element in 3 sorted Array");
+ }
+}   
+
+public class CommonElement{
+ public static void main(String [] args){
+ 
+  int []arr1=new int[]{2,3,6,7,9,13,14}; 
+  int []arr2=new int[]{4,5,8,10,16,15,18};
+  int []arr3=new int[]{2,5,6,9,11,13,17};
+
+  boolean flag = false;
+  for(int i=0;i<arr1.length;i++)
+  {
+   for(int j=0;j<arr2.length;j++)
+    {
+     if(arr1[i]==arr2[j])
+     {
+     for(int k=0;k<arr3.length;k++)
+     {
+       if(arr1[i]==arr3[k])
+       {
+         System.out.println("Common Element in 3 sorted Array :"+arr1[i]);
+         flag = true;
+       }
+     }
+    }
+   }
+  }
+  if(!flag)
+    System.out.println("Not Common Element in 3 sorted Array");
+ }
+}  
+
+
+                                                    
+Q4.Write a Java program to find the number of even and odd integers in a given array of integers.         
+                                                  
+ public class FindEvenOdd{
+ public static void main(String [] args){
+
+  int []arr1=new int[]{2,3,6,7,9,13,14}; 
+  for(int i=0;i<arr1.length;i++)
+  {
+     if(arr1[i]%2==0)
+        System.out.println("Even No. :"+arr[i]);
+     else
+      System.out.println("Odd No. :"+arr[i]);
+  }
+ }
+}    
+
+Q5.Write a Java program to check if the sum of all the 10's in the array is exactly 30. Return false if the condition does not satisfy, otherwise true. 
+public class {
+ public static void main(String [] args){
+
+  int []arr1=new int[]{2,10,6,10,9,10,14};
+  int count=0; 
+  for(int i=0;i<arr1.length;i++)
+  {
+     if(arr1[i]==10)
+        count++;
+  }
+  if(count==3)
+   System.out.println("Sum of 10's equal to 30");
+  else
+   System.out.println("Sum of 10's is not equal to 30");
+ }
+}    
+                                                                                          Q6.How can a Java string be converted into a byte array?.
+   
+Converting a Java string to a byte array can be achieved through the getBytes() method of the String class. This method encodes the string into a sequence of bytes using the platform’s default charset. Here’s an example:
+
+String str = "PANKAJ";
+byte[] byteArr = str.getBytes();
+
+You can also specify a charset as an argument to getBytes() to use a specific encoding scheme:
+
+String str = "PANKAJ";
+byte[] byteArr = str.getBytes("UTF-8");  // Using UTF-8 charset
+
+In Java 1.7 and later, you can use the StandardCharsets class to specify the charset:
+
+String str = "PANKAJ";
+byte[] byteArr = str.getBytes(StandardCharsets.UTF_8);
+
+Note that if you omit the charset argument, the default charset of the platform will be used. This may lead to issues if the platform’s default charset is not compatible with the intended encoding scheme.
+
+It’s also important to catch or handle the UnsupportedEncodingException that may be thrown if the specified charset is not supported by the platform.
+
+public class StringConByteArray{
+ public static void main(String [] args){
+  
+ String str = "PANKAJ";
+ byte[] byteArr = str.getBytes();
+ 
+ for(byte e:byteArr)
+   System.out.print((char)e+" ");
+ }
+} 
+                                   
+Q7. WAP to Split a String into a Number of Substrings in Java.
+
+public class SubString{
+ public static void main(String [] args){
+
+   boolean [] arr = new boolean[26];
+    int count = 0;
+    for(int i=0;i<s.length();i++){
+
+       char ch = s.charAt(i);
+        int n = ch - 'a';
+        arr[n] = true;
+     }
+        
+        for(int i=0;i<arr.length;i++)
+        {
+             if(arr[i]==true) 
+            {
+               count++;
+            }
+        }
+        return count;
+    }
+} 
+  
+
+
+Q.1 Given an array and a key, the task is to remove all occurrences of the specified key from the array in Java. Examples:
+Input: array = { 3, 9, 2, 3, 1, 7, 2, 3, 5 }, key = 3
+Output: [9, 2, 1, 7, 2, 5]
+
+public class RomoveOccurencesOfKey{
+ public static void main(String [] args){
+  
+ int []arr={ 3, 9, 2, 3, 1, 7, 2, 3, 5 };
+ int key=3,count=0;
+ for(int i=0;i<arr.length;i++)
+ {
+  if(arr[i]==key)
+    count++;
+ }
+ if(count==0)
+  {
+    for(int e:arr)
+     System.out.print(e+" ");
+  }
+ else
+  {
+    int []arr1= new int[arr.length-count];  
+    for(int i=0,j=0;i<arr.length;i++)
+    {
+     if(arr[i]!=key)
+     {
+       arr1[j]=arr[i];
+       j++;
+     }
+    }
+     for(int e:arr1)
+      System.out.print(e+" ");
+  }
+ }
+}  
+
+Q.2 Find the minimum distance between the given two words.
+Input: S = { “the”, “quick”, “brown”, “fox”, “quick”},
+ word1 = “the”, word2 = “fox”
+Output: 3
+Explanation: Minimum distance between the words “the” and “fox” is 3
+
+public class MinimdistBwWords{
+ public static void main(String [] args){
+
+ String []S = {"the","quic","kbrown","fox","quick"};
+ String word1= "the",word2 = "fox";
+ int f=0,l=0;
+ for(int i=0;i<S.length;i++)
+ {
+   if(S[i].equals(word1)) 
+     f=i;
+   if(S[i].equals(word2))
+     l=i;
+ }
+  System.out.println(l-f);
+ }
+ }
+
+Q.3  How to check if String is Palindrome?
+
+public class PalindromeString{
+ public static void main(String []args){
+  String myStr= "madam";;
+  int left=0,right=myStr.length()-1;
+  boolean flag=true;
+  while(left<right)
+  {
+     if(myStr.charAt(left)!=myStr.charAt(right))
+     {
+       flag=false;
+       break;
+     }
+      right--;
+      left++;
+  }
+  if(flag)
+     System.out.print(myStr+" is Palindrome String");
+  else
+     System.out.print(myStr+" is not a Palindrome String");
+ }
+}
+
+
+
+
+Q.4 How to check if a String is a valid shuffle of two String.
+Problem: Given three strings, check if the third string is a valid shuffle of the first two strings.
+Example:
+Input: str1 = "abc", str2 = "def", str3 = "adbcef"
+Output: true
+Explanation: "adbcef" is a valid shuffle of "abc" and "def".
+
+public class ValidShuffleOfTwoString{
+ public static void main(String []args){
+  String str1 = "abc", str2 = "def", str3 = "adbcef";
+  String temp=str1+str2;
+  boolean flag=false;
+  if((temp.length()!=str3.length())||(str3.equals(temp)))
+    System.out.print(str3+" isn't a valid shuffle of "+str1+" and "+str2);
+  else
+  {
+  for(int i=0;i<str3.length();i++)
+  {
+    flag=false;
+    for(int j=0;j<temp.length();j++)
+    {
+      if(str3.charAt(i)==temp.charAt(j))
+        flag = true;
+    }
+    if(!flag){
+     System.out.print(str3+" is not a valid shuffle of "+str1+"and"+str2);
+     break;
+    }
+  }
+    if(flag)
+     System.out.print(str3+" is a valid shuffle of "+str1+" and "+str2);
+  }
+ }
+}
+
+
+public class ValidShuffleOfTwoString{
+ public static void main(String[] args) {
+  boolean flag = true;
+  String str1 = "abc";
+  String str2 = "def";
+  String str3 = "adbcef";
+
+   String newString = str1 + str2;
+
+   char[] ch = newString.toCharArray();
+
+    if (str3.length() != ch.length) {
+    flag = false;
+    } else{
+    for(int i = 0;i<ch.length;i++){
+      for(int j = 0;j<str3.length();j++){
+                    if(str3.charAt(i) == ch[j]){
+                        ch[j] = ' ';
+                    }
+                }
+            }
+            for(int i = 0; i<ch.length;i++){
+                if(ch[i] != ' '){
+                    flag = false;
+                }
+            }
+        }
+
+        System.out.println(flag);
+    }
+}
+
+ 
+
+
+
+Q.5
+        A 
+      B C 
+    D E F 
+  G H I J 
+K L M N O
+
+public class pattern1{
+ public static void main(String []args){
+  
+  char ch='A';
+  for(int i=1;i<=5;i++)
+  {
+   for(int j=5;j>=1;j--)
+   {
+     if(i>=j)
+      System.out.print(ch++);
+     else
+      System.out.print(" ");
+   }
+   System.out.println();
+  }
+ }
+}
+
+Q.6
+X 
+Y Z 
+A B C 
+D E F G 
+H I J K L
+
+ public class pattern2{
+ public static void main(String []args){
+  
+  char ch='X';
+  for(int i=1;i<=5;i++)
+  {
+   for(int j=1;j<=i;j++)
+   {
+     System.out.print(ch++);
+   }
+    if(ch=='[')
+       ch='A';
+   System.out.println();
+  }
+ }
+}
+
+Q.7
+A 
+      B C 
+    D E F 
+  G H I J 
+K L M N O
+
+public class pattern1{
+ public static void main(String []args){
+  
+  char ch='A';
+  System.out.println(ch++);
+  for(int i=2;i<=5;i++)
+  {
+   for(int j=5;j>=1;j--)
+   {
+     if(i>=j)
+      System.out.print(ch++);
+     else
+      System.out.print(" ");
+   }
+   System.out.println();
+  }
+ }
+}
+
+
+
+Q1.You are given an array of ‘N’ integers, you need to find the maximum of minimum for every window size.
+  The size of the window should vary from 1 to ‘N’ only.For example:ARR = [1,2,3,4]
+Minimums of window size 1 = min(1), min(2), min(3), min(4) = 1,2,3,4
+Maximum among (1,2,3,4)  is 4
+Minimums of window size 2 = min(1,2), min(2,3),   min(3,4) = 1,2,3
+Maximum among (1,2,3) is 3
+Minimums of window size 3 = min(1,2,3), min(2,3,4) = 1,2
+Maximum among (1,2) is 2
+Minimums of window size 4 = min(1,2,3,4) = 1
+Maximum among them is 1
+The output array should be [4,3,2,1]
+
+
+public class MaxMin{
+ public static void main(String [] args){
+
+  int [] arr = new int[]{1,2,3,4,5,6};
+  
+  
+  
+ }
+}
+Q2.Move the zeros to the left of the array.
+
+public class SiftZerosLeft{
+ public static void main(String [] args){
+
+    int []arr={6,0,9,0,-1,0,9,7,0,5,0};
+    
+    for(int i=0;i<arr.length;i++)
+    {
+      for(int j=0;j<arr.length;j++)
+      {
+       if(arr[i]==0)
+       {
+        //   arr[j]=arr[i];
+        //   arr[i]=0;
+          int temp=arr[j];
+          arr[j]=arr[i];
+          arr[i]=temp;
+       }
+      }
+    }
+    for(int e : arr)
+      System.out.print(e +" ");
+  }
+}
+ for(int i=0;i<arr.length;i++)
+    {
+      for(int j=1;j<arr.length;j++)
+      {
+       if(arr[j]==0 && arr[j-1] !=0)
+       {
+          int temp=arr[j];
+          arr[j]=arr[j-1];
+          arr[j-1]=temp;
+       }
+      }
+    }
+
+Q3. Matrix Spiral Traversal .(Array element)
+for example:
+1  2  3  4
+5  6  7  8 
+9 10 11 12
+13 14 15 16
+output: 1 2 3 4 8 12 16 15 14 13 9 5 6 7 11 10
+
+public class SpiralTraversalMatrix{
+ public static void main(String [] args){
+
+ int [][]arr=new int[]{{1,2,3,4},{5,6,7,8},{9,10,11,12},{13,14,15,16}};
+  for(int i=0;i<arr.length;i++)
+  {
+   for(int j=0;j<arr[i].length;j++)
+   {
+    
+   }
+  }
+
+ }
+}
+Q4. How to Check Palindrome Words in a Sentence in Java.
+for example: Enter the sentence :
+Mom and Dad are not at home.
+palindrome word: Mom
+palindrome word: Dad
+
+String myStr = "Split a string by spaces, and also punctuation.";
+String regex = "[,\\.\\s]";
+String[] myArray = myStr.split(regex);
+for (String s : myArray) {
+  System.out.println(s);
+}
+
+public class  PalindromeWordsSentence{
+ public static void main(String [] args){
+
+  String Str="MoM and DaD are not at home";
+  Boolean flag=true;
+
+  //String str = "geekss@for@geekss";
+  //String[] arrOfStr = str.split("@", 2);
+ // String str = "Geeks for Geeks";
+ //  String[] arrOfStr = str.split(" ");
+
+      
+   
+  String [] S = Str.split(" ",7);
+//   for (String s : S )
+//      System.out.print(s);
+  
+  
+  for(int i=0;i<S.length;i++)
+  {
+    int start=0,end=S[i].length()-1;
+    flag=true;
+    while(start<end)
+    {
+      if(S[i].charAt(start)!=S[i].charAt(end))
+      {
+        flag=false; 
+        break;
+      }
+      start++;
+      end--;
+    }
+    if(flag)
+     System.out.println("Palindrome Word : "+S[i]);
+    else
+     System.out.println("non Palindrome Word : "+S[i]);
+  }
+ }
+}
+
+
+Q5.Write a Java Program to check if String is Panagram or not.
+Panagram String: A string is a Panagram String if it contains every letter of the alphabet at least once. 
+ Panagram strings must include every letter from A to Z and are usually case-insensitive.
+for example:Input: “The quick brown fox jumps over the lazy dog”
+Output: is a Pangram
+Explanation: Contains all the characters from ‘a’ to ‘z’]
+nput: “The quick brown fox jumps over the dog”
+Output: is not a Pangram
+Explanation: Doesn’t contain all the characters from ‘a’ to ‘z’, as ‘l’, ‘z’, ‘y’ are missing.
+
+public class Panagram{
+ public static void main(String []args){
+  
+  String S="The quick brown fox jumps over lazy the dog",
+  S1=S.toLowerCase();
+  boolean []flag=new boolean[25];
+  boolean c=true;
+  for(int i=0;i<S1.length();i++)
+  { 
+    char ch = S1.charAt(i);
+    int index=ch-'a';
+    flag[index]=true;
+   }
+   for(boolean b : flag){
+     if(b==false)
+     {
+       c=false;
+       break;
+     }
+   }
+    if(c)   
+     System.out.print("is an Anagram Number");
+    else
+     System.out.print("is not an Anagram Number");
+ }
+}
+
+
+Q6.Converting Decimal Number lying between 1000 to 3999 to Roman Numerals.
+
+Q7.
+1111111
+1111122
+1111333
+1114444
+1155555
+1666666
+7777777
+
+public class pattern1{
+ public static void main(String []args){
+  
+  System.out.println();
+  for(int i=1;i<=7;i++)
+  {
+   for(int j=7;j>=1;j--)
+   {
+     if(i>=j)
+      System.out.print(i);
+     else
+      System.out.print("1");
+   }
+   System.out.println();
+  }
+ }
+}
+
+
+Q8.
+H WORLD
+HE WORL   
+HEL WOR
+HELL WO 
+HELLO W
+
+public class pattern1{
+ public static void main(String []args){
+  
+  String S1="HELLO",S2="WORLD";
+
+  for(int i=0;i<S1.length();i++)
+  {
+   for(int j=0;j<=i;j++)
+      System.out.print(S1.charAt(j));
+    System.out.print(" ");
+   for(int j=0;j<=S2.length()-i-1;j++)
+      System.out.print(S2.charAt(j));  
+   System.out.println();
+  }
+ }
+}
+
+Q9.
+T     
+  U
+    T
+      O
+        R
+          I
+            A
+              L
+                S
+
+F
+  R
+    E
+      A
+        K
+
+public class pattern1{
+ public static void main(String []args){
+  
+  String S1="TUTORIALS",S2="FREAK";
+  for(int i=0;i<S1.length();i++)
+  {
+   for(int j=0;j<S1.length();j++)
+   {
+     if(i==j)
+      System.out.print(S1.charAt(i));
+     else
+      System.out.print(" ");
+    }
+   System.out.println();
+  }
+
+  for(int i=0;i<=S2.length();i++)
+  {
+   for(int j=0;j<=S2.length();j++)
+   {
+     if(i==j)
+      System.out.print(S2.charAt(i));
+     else
+      System.out.print(" ");
+    }
+   System.out.println();
+  }
+
+ }
+}
+
+public class pattern1{
+ public static void main(String []args){
+  for(int i=1;i<=5;i++)
+  {
+   for(int j=6-i;j>=1;j--)
+     System.out.print(j);
+  for(int k=2;k<=6-i;k++)
+     System.out.print(k);
+   System.out.println();
+ }
+ }
+}
+
+
+                   *ArrayList program in java*
+
+.Write a Java program to iterate through all elements in an array list.
+. Write a Java program to insert an element into the array list at the first position.
+. Write a Java program to retrieve an element (at a specified index) from a given      array list.
+. Write a Java program to update an array element by the given element.
+. Write a Java program to remove the third element from an array list.
+. Write a Java program to search for an element in an array list.
+. Write a Java program to sort a given array list.
+  Write a Java program to copy one array list into another.
+. Write a Java program to shuffle elements in an array list.
+. Write a Java program to reverse elements in an array list.
+. Write a Java program to extract a portion of an array list.
+. Write a Java program to compare two array lists.
+. Write a Java program that swaps two elements in an array list.
+. Write a Java program to join two array lists.
+. Write a Java program to clone an array list to another array list.
+. Write a Java program to empty an array list.
+. Write a Java program to test whether an array list is empty or not.
+. Write a Java program for trimming the capacity of an array list.
+. Write a Java program to increase an array list size.
+. Write a Java program to replace the second element of an ArrayList with the specified element.
+. Write a Java program to print all the elements of an ArrayList using the elements' position.
+
+
+
+
+                        *linkedlist program in java*
+
+1.Write a Java program to append the specified element to the end of a linked list.
+
+2.Write a Java program to iterate through all elements in a linked list.
+
+3. Write a Java program to iterate through all elements in a linked list starting at the specified position.
+
+4. Write a Java program to iterate a linked list in reverse order.
+
+5. Write a Java program to insert the specified element at the specified position in the linked list.
+6. Write a Java program to insert elements into the linked list at the first and last positions.
+7. Write a Java program to insert the specified element at the front of a linked list.
+8. Write a Java program to insert the specified element at the end of a linked list.
+9. Write a Java program to insert some elements at the specified position into a linked list.
+10. Write a Java program to get the first and last occurrence of the specified elements in a linked list.
+11. Write a Java program to display elements and their positions in a linked list.
+12. Write a Java program to remove a specified element from a linked list.
+13. Write a Java program to remove the first and last elements from a linked list.
+14. Write a Java program to remove all elements from a linked list.
+15. Write a Java program that swaps two elements in a linked list.
+16. Write a Java program to shuffle elements in a linked list.
+17. Write a Java program to join two linked lists.
+18. Write a Java program to copy a linked list to another linked list.
+19. Write a Java program to remove and return the first element of a linked list.
+20. Write a Java program to retrieve, but not remove, the first and last element of a linked list.
+21. Write a Java program to check if a particular element exists in a linked list.
+22.write a Java program to convert a linked list to an array list.
+23. Write a Java program to compare two linked lists.
+24. Write a Java program to check if a linked list is empty or not.
+25. Write a Java program to replace an element in a linked list.
+
+
+
+
+1
+23
+345
+4567
+56789
+
+ for(int i=1;i<=5;i++)
+       {
+         int k=i;
+         for(int j=1;j<=i;j++)
+        {
+
+            System.out.print(k);
+            k=j+i;
+        }
+        System.out.println();
+      }
+
+
+String str = "Dear Student You Need To Work Hard";
+        String[] arr = str.split(" ");
+        int max=arr[0].length(),index=0;
+         for(int i=1;i<arr.length;i++)
+         {
+            //  System.out.println(arr[i]);
+             if(max<arr[i].length()){
+              max=arr[i].length();
+              index=i;
+             }
+         }
+          System.out.println(arr[index]);
+output: Student
+

@@ -1,0 +1,249 @@
+Que. 1 Write a java program to read/write data into the file.(Use File Output Stream, File Input Stream).
+
+package FileHandling;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class Ex1ReadWrite {
+    public static void main(String[] args){
+
+        String fileName = "fileHand.txt";
+        String fileContent = "Hello, this is a test file.\nWelcome to file handling in Java!";
+        byte []brr = fileContent.getBytes();
+
+        File file = new File(fileName);
+
+        // Check if the file exists
+
+        if (file.exists()) {
+            System.out.println("File exists.");
+        }
+        try {
+            if (file.createNewFile()){
+                System.out.println("file created..");
+            }else {
+                System.out.println("An error occur..");
+            }
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+    
+        // write data into file
+
+
+        try(FileOutputStream f = new FileOutputStream(file,true)){
+
+            f.write(brr);
+            System.out.println("File modified");
+
+        }catch (IOException e){
+            System.out.println(e);
+        }
+
+
+        //Read data from file 
+        try(FileInputStream f = new FileInputStream(file)){
+
+            int ch;
+            while ((ch = f.read()) != -1) {
+                System.out.print((char) ch);
+            }
+    
+        }catch (IOException e){
+            System.out.println(e);
+        }
+    }
+}
+
+Que. 2 What is Serialization ? Write a java program to store the object into the file.
+
+Serialization is converting the data or object into the sequence of byte.
+to achieve Serialization we need to implements Serializable interface.
+Serializable interface does not have any method and data member becoz of that it's called Marker Interface.
+Serializable is a marker interface (has no data member and method). It is used to "mark" Java classes so that the objects of these classes may get a certain capability. The Cloneable and Remote are also marker interfaces.
+
+Serialization in Java is a mechanism of writing the state of an object into a byte-stream. It is mainly used in Hibernate, RMI, JPA, EJB and JMS technologies.
+
+The reverse operation of serialization is called deserialization where byte-stream is converted into an object. The serialization and deserialization process is platform-independent, it means you can serialize an object on one platform and deserialize it on a different platform.
+
+For serializing the object, we call the writeObject() method of ObjectOutputStream class, and for deserialization we call the readObject() method of ObjectInputStream class.
+
+We must have to implement the Serializable interface for serializing the object.
+
+import java.io.Serializable;
+public class Customer implements Serializable{
+   private int id;
+   private String name;
+   private String contact;
+   private int age;
+   transient private String girlFriendName;
+   private static String bankName = "ICICI";
+   public Customer(){}
+   public Customer(int id, String name, String contact, int age, String girlFriendName){
+    this.id = id;
+    this.name = name;
+    this.contact = contact;
+    this.age = age;
+    this.girlFriendName = girlFriendName;
+   }
+   public String toString(){
+    return id+" "+name+" "+contact+" "+age+" "+girlFriendName;
+   }
+}
+
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+class TestMain{
+    public static void main(String args[]){
+        try{
+          File f = new File("customer.txt");
+          FileOutputStream fout = new FileOutputStream(f);
+          ObjectOutputStream oos = new ObjectOutputStream(fout);
+          Customer c = new Customer(100,"ABC","9009111222",23,"Sheela");
+          oos.writeObject(c);
+          System.out.println("Operation success...");
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+}
+
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+class TestMain{
+    public static void main(String args[]){
+        try{
+          File f = new File("customer.txt");
+          FileInputStream fin = new FileInputStream(f);
+          ObjectInputStream ois = new ObjectInputStream(fin);
+          Customer c = (Customer)ois.readObject();
+          System.out.println(c);
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+}
+
+
+Que. 3 Explain transient keyword in java with example.
+
+Ans.The transient keyword is a variable modifier in Java used in the context of serialization. When applied to a variable, it instructs the Java Virtual Machine (JVM) to exclude that variable from the serialization process. Transient variables are not saved in the serialized form of the object.
+
+Ex.-transient private String girlFriendName;
+
+If you don't want to serialize any data member of a class, you can mark it as transient.
+Ex.
+class Employee implements Serializable{  
+ transient int id;  
+ String name;  
+ public Student(int id, String name) {  
+  this.id = id;  
+  this.name = name;  
+ }  
+}  
+Now, id will not be serialized, so when you deserialize the object after serialization, you will not get the value of id. It will return default value always. In such case, it will return 0 because the data type of id is an integer.
+
+
+Que. 4 Write a program to count how many times character ‘t’ occurs in a file.
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+public class QNo4 {
+    public static void main(String[] args) {
+
+        String fileName = "fileHand.txt";
+        int count = 0;
+        File file = new File(fileName);
+        try(FileInputStream f = new FileInputStream(file)){
+
+            int ch;
+            while ((ch = f.read()) != -1) {
+                System.out.print((char) ch);
+                if(ch=='t')
+                {
+                    count++;
+                }
+            }
+    
+        }catch (IOException e){
+            System.out.println(e);
+        }
+        System.out.println();
+        System.out.println(count+" times character t occurs in "+fileName+" file");
+        
+    }
+    
+}
+
+
+Que. 5 Write a program to count no of words in a text file and average word size.
+
+
+Que. 6 Write a program to count number of bytes in a image file(jpeg/png/gif). Also find how much time it will take to upload the file on server if internet speed is 256 bps(bitsper second).
+
+Que. 7 Write a program to store your shopping details in a binary file(shopping.dat) with information itemName, price, quantity. (Use ObjectOutputStream to store Item class object).
+
+import java.io.*;
+
+public class EnteringShoppingDetails {
+    public static void main(String[] args) {
+        String filename = "ShoppingData.dat";
+
+        try {
+            File file = new File(filename);
+            FileOutputStream fout = new FileOutputStream(file);
+            ObjectOutputStream oos = new ObjectOutputStream(fout);
+            Customer c = new Customer("Noodles", 20, 4);
+            oos.writeObject(c);
+            Customer c2 = new Customer("Pizza", 400, 2);
+            oos.writeObject(c2);
+            Customer c3 = new Customer("Cap", 150, 1);
+            oos.writeObject(c3);
+
+            System.out.println("Operation success...");
+            oos.close();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+}
+
+
+Que. 8 Write a program to read data from shopping.dat file creted in above problem and find total money
+import java.io.*;
+
+public class GettingShoppingDetails {
+    public static void main(String args[]) {
+        String filename = "ShoppingData.dat";
+
+        try {
+            File f = new File(filename);
+            FileInputStream fin = new FileInputStream(f);
+            ObjectInputStream ois = new ObjectInputStream(fin);
+            Customer c = (Customer) ois.readObject();
+            System.out.println(c);
+            Customer c2 = (Customer) ois.readObject();
+            System.out.println(c2);
+            Customer c3 = (Customer) ois.readObject();
+            System.out.println(c3);
+
+            int totalMoney = c.totalMoney() + c2.totalMoney() + c3.totalMoney();
+
+            System.out.println("Total Money = " + totalMoney);
+
+            ois.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}

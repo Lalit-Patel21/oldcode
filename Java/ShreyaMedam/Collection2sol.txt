@@ -1,0 +1,782 @@
+1. Write a Java program to append the specified element to the end of a linked list.
+
+import java.util.LinkedList;
+
+public class ColleAsig2 {
+    public static void main(String[] args) {
+        
+        LinkedList ll = new LinkedList();
+        ll.add("Ram");
+        ll.add("shyam");
+        ll.add("krishna");
+        ll.add("rahgunath");
+        ll.add("hari");
+        System.out.println(ll);
+    }
+    
+}
+
+
+2. Write a Java program to iterate through all elements in a linked list.
+
+import java.util.LinkedList;
+import java.util.ListIterator;
+import java.util.Iterator;
+public class ColleAsig2 {
+    public static void main(String[] args) {
+        
+        LinkedList ll = new LinkedList();
+        ll.add("Ram");
+        ll.add("shyam");
+        ll.add("krishna");
+        ll.add(3, "rahgunath");
+        ll.add(4,"hari");
+        System.out.println(ll);
+
+        Iterator itr = ll.iterator();
+        while (itr.hasNext()) 
+        {
+         System.out.print(itr.next() +" ");   
+        }
+       
+       System.out.println();  
+        
+
+        ListIterator li = ll.listIterator();
+        while (li.hasNext()) {
+             System.out.print(li.next() +" ");  
+        }
+        
+        System.out.println();   
+
+        while (li.hasPrevious()) {
+             System.out.print(li.previous() +" ");  
+        }
+        System.out.println();
+    }
+
+}
+
+3.  Write a Java program to iterate through all elements in a linked list starting at the specified position.
+import java.util.LinkedList;
+import java.util.ListIterator;
+import java.util.Iterator;
+public class ColleAsig2 {
+   public static void main(String[] args) {
+        
+        LinkedList ll = new LinkedList();
+        ll.add("Ram");
+        ll.add("shyam");
+        ll.add("krishna");
+        ll.add(3, "rahgunath");
+        ll.add(4,"hari");
+
+
+        System.out.println(ll);
+
+        Iterator itr = ll.iterator(3);
+        while (itr.hasNext()) 
+        {
+         System.out.print(itr.next() +" ");   
+        }
+       
+       System.out.println();  
+        
+
+    }
+}
+
+4. Write a Java program to iterate a linked list in reverse order.
+import java.util.LinkedList;
+import java.util.ListIterator;
+import java.util.Iterator;
+public class ColleAsig2 {
+   public static void main(String[] args) {
+        
+        LinkedList ll = new LinkedList();
+        ll.add("Ram");
+        ll.add("shyam");
+        ll.add("krishna");
+        ll.add(3, "rahgunath");
+        ll.add(4,"hari");
+
+
+        System.out.println(ll);
+
+        
+        ListIterator li = ll.listIterator();
+
+        while (li.hasNext()) {
+             System.out.print(li.next() +" ");  
+        }
+         li.set("ganesh");
+        System.out.println();   
+
+        while (li.hasPrevious()) {
+             System.out.print(li.previous() +" ");  
+        }
+        System.out.println();
+       
+        Iterator itr = ll.descendingIterator();
+        while (itr.hasNext()) 
+        {
+         System.out.print(itr.next() +" ");   
+        }
+        System.out.println();  
+      
+    }
+
+}
+
+
+5. Write a Java program to insert the specified element at the specified position in the linked list.
+
+import java.util.LinkedList;
+
+public class ColleAsig2 {
+    public static void main(String[] args) {
+        
+        LinkedList ll = new LinkedList();
+        ll.add("Ram");
+        ll.add("shyam");
+        ll.add("krishna");
+        ll.add(3,"rahgunath");
+        ll.add(4,"hari");
+        System.out.println(ll);
+    }
+    
+}
+
+6. Write a Java program to insert elements into the linked list at the first and last positions.
+
+import java.util.LinkedList;
+
+public class ColleAsig2 {
+    public static void main(String[] args) {
+        
+        LinkedList ll = new LinkedList();
+        ll.add("Ram");
+        ll.add("shyam");
+        ll.add("krishna");
+        ll.add(3,"rahgunath");
+        ll.add(4,"hari");
+        System.out.println(ll);
+        
+        ll.addFirst("ViratSwarup");
+        ll.addLast("Shivrupam");
+        System.out.println(ll);
+    }
+    
+}
+
+
+7. Write a Java program to insert the specified element at the front of a linked list.
+import java.util.LinkedList;
+
+public class ColleAsig2 {
+    public static void main(String[] args) {
+        
+        LinkedList ll = new LinkedList();
+        ll.add("Ram");
+        ll.add("shyam");
+        ll.add("krishna");
+        ll.add(3,"rahgunath");
+        ll.add(4,"hari");
+        System.out.println(ll);
+        
+        ll.addFirst("ViratSwarup");
+        System.out.println(ll);
+    }
+    
+}
+
+
+8. Write a Java program to insert the specified element at the end of a linked list.
+
+import java.util.LinkedList;
+
+public class ColleAsig2 {
+    public static void main(String[] args) {
+        
+        LinkedList ll = new LinkedList();
+        ll.add("Ram");
+        ll.add("shyam");
+        ll.add("krishna");
+        ll.add(3,"rahgunath");
+        ll.add(4,"hari");
+        System.out.println(ll);
+         
+        ll.addLast("Shivrupam"); 
+        System.out.println(ll);
+    }
+    
+}
+
+
+9. Write a Java program to insert some elements at the specified position into a linked list.
+  
+import java.util.LinkedList;
+
+public class ColleAsig2 {
+    public static void main(String[] args) {
+        
+        LinkedList ll = new LinkedList();
+        ll.add("Ram");
+        ll.add("shyam");
+        ll.add("krishna");
+        ll.add("rahgunath");
+        ll.add("hari");
+        System.out.println(ll);
+        
+        ll.addFirst("ViratSwarup");
+        System.out.println(ll);
+
+        ll.add( 2,"gopal");
+        ll.add(4,"Govinda");
+    }
+    
+}
+
+10. Write a Java program to get the first and last occurrence of the specified elements in a linked list.
+import java.util.LinkedList;
+
+public class ColleAsig2 {
+    public static void main(String[] args) {
+        
+        LinkedList ll = new LinkedList();
+        ll.add("Ram");
+        ll.add("shyam");
+        ll.add("krishna");
+        ll.add(3,"rahgunath");
+        ll.add(4,"hari");
+        System.out.println(ll);
+        
+        System.out.println( ll.getFirst());
+        System.out.println(ll.getLast());
+        System.out.println(ll);
+    }
+}
+    
+
+11. Write a Java program to display elements and their positions in a linked list.
+
+import java.util.LinkedList;
+
+public class ColleAsig2 {
+    public static void main(String[] args) {
+        
+        LinkedList ll = new LinkedList();
+        ll.add("Ram");
+        ll.add("shyam");
+        ll.add("krishna");
+        ll.add(3,"rahgunath");
+        ll.add(4,"hari");
+        System.out.println(ll);
+    
+        System.out.println();  
+
+       for(int i=0; i<ll.size(); i++)
+       {
+        System.out.println(i+" "+ll.get(i));
+       }
+  }
+}
+12. Write a Java program to remove a specified element from a linked list.
+import java.util.LinkedList;
+
+public class ColleAsig2 {
+    public static void main(String[] args) {
+        
+        LinkedList ll = new LinkedList();
+        ll.add("Ram");
+        ll.add("shyam");
+        ll.add("krishna");
+        ll.add(3,"rahgunath");
+        ll.add(4,"hari");
+        System.out.println(ll);
+        System.out.println(); 
+
+        ll.remove(3);
+        System.out.println(ll); 
+      }
+}
+
+13. Write a Java program to remove the first and last elements from a linked list.
+public class ColleAsig2 {
+    public static void main(String[] args) {
+        
+        LinkedList ll = new LinkedList();
+        ll.add("Ram");
+        ll.add("shyam");
+        ll.add("krishna");
+        ll.add(3,"rahgunath");
+        ll.add(4,"hari");
+        System.out.println(ll);
+        System.out.println(); 
+
+        ll.removeFirst();
+        ll.removeLast();
+        System.out.println(ll);
+
+      }
+}
+
+
+
+14. Write a Java program to remove all elements from a linked list.
+public class ColleAsig2 {
+    public static void main(String[] args) {
+        
+        LinkedList ll = new LinkedList();
+        ll.add("Ram");
+        ll.add("shyam");
+        ll.add("krishna");
+        ll.add(3,"rahgunath");
+        ll.add(4,"hari");
+        System.out.println(ll);
+        System.out.println(); 
+
+        ll.removeAll(ll);
+        System.out.println(ll); 
+
+      }
+}
+
+15. Write a Java program that swaps two elements in a linked list.
+16. Write a Java program to shuffle elements in a linked list.
+17. Write a Java program to join two linked lists.
+18. Write a Java program to copy a linked list to another linked list.
+19. Write a Java program to remove and return the first element of a linked list.
+20. Write a Java program to retrieve, but not remove, the first and last element of a linked list.
+21. Write a Java program to check if a particular element exists in a linked list.
+22.write a Java program to convert a linked list to an array list.
+23. Write a Java program to compare two linked lists.
+24. Write a Java program to check if a linked list is empty or not.
+25. Write a Java program to replace an element in a linked list.
+
+
+                        *HashSet*
+
+1. Write a Java program to append the specified element to the end of a hash set.
+import java.util.HashSet;
+public class ColleAsig2 {
+    public static void main(String[] args) {
+        
+         HashSet hs = new HashSet<>();
+         hs.add(10);
+         hs.add("Collection Framework");
+         hs.add('l');
+         hs.add("hasset");
+         System.out.println(hs);
+      }
+}
+import java.util.HashSet;
+import java.util.Iterator;
+public class CollecAsig {
+public static void main(String[] args) {
+HashSet hs= new HashSet<>();
+hs.add("Shree");
+hs.add("Krishna");
+hs.add("govinda");
+hs.add("hare ");
+hs.add("aasha ");
+hs.add("narayan");
+hs.add("york");
+hs.add("vasu");
+System.out.println(hs);
+Iterator itr=hs.iterator();
+while(itr.hasNext()){
+System.out.println(itr.next());
+}
+}
+}
+
+
+2. Write a Java program to iterate through all elements in a hash set.
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+public class ColleAsig2 {
+    public static void main(String[] args) {
+        
+        HashSet hs = new HashSet<>();
+        hs.add(10);
+        hs.add("Collection Framework");
+        hs.add('l');
+        hs.add("hasmap");
+        System.out.println(hs);
+
+        Iterator itr1 = hs.iterator();
+        while (itr1.hasNext()) 
+        {
+         System.out.print(itr1.next() +" ");   
+        }
+
+        System.out.println();
+
+        Set s = new HashSet();
+        s.add("anil");
+        s.add("rahul");
+        s.add("java");
+
+        Iterator itr = s.iterator();
+        while (itr.hasNext()) 
+        {
+         System.out.print(itr.next() +" ");   
+        }
+     }
+}
+
+
+
+
+3. Write a Java program to get the number of elements in a hash set.
+
+import java.util.HashSet;
+public class ColleAsig {
+public static void main(String[] args) {
+HashSet hs= new HashSet<>();
+hs.add("Shree");
+hs.add("Krishna");
+hs.add("govinda");
+hs.add("hare ");
+hs.add("aasha ");
+hs.add("narayan");
+hs.add("york");
+hs.add("vasu");
+System.out.println(hs);
+System.out.println("The number of elements in hashset: "+hs.size());
+}
+}
+4. Write a Java program to empty an hash set.
+import java.util.HashSet;
+public class ColleAsig {
+public static void main(String[] args) {
+HashSet hs= new HashSet<>();
+hs.add("Shree");
+hs.add("Krishna");
+hs.add("govinda");
+hs.add("hare ");
+hs.add("aasha ");
+hs.add("narayan");
+hs.add("york");
+hs.add("vasu");
+System.out.println(hs);
+hs.removeAll(hs);
+System.out.println((hs));
+System.out.println(hs.isEmpty());
+
+}
+}
+
+5. Write a Java program to test if a hash set is empty or not.
+import java.util.HashSet;
+public class ColleAsig {
+public static void main(String[] args) {
+HashSet hs= new HashSet<>();
+hs.add("Shree");
+hs.add("Krishna");
+hs.add("govinda");
+hs.add("hare ");
+hs.add("aasha ");
+hs.add("narayan");
+hs.add("york");
+hs.add("vasu");
+System.out.println(hs);
+hs.removeAll(hs);
+System.out.println((hs));
+System.out.println(hs.isEmpty());
+}
+}
+
+6. Write a Java program to create a tree set, add some colors (strings) and print out the tree set.
+import java.util.TreeSet;
+public class ColleAsig2 {
+    public static void main(String[] args) {
+
+        TreeSet ts=new TreeSet<>();
+        ts.add("yellow");
+        ts.add("green");
+        ts.add("black");
+        ts.add("red");
+        ts.add("pink");
+        ts.add("brown");
+        ts.add("white");
+        System.out.println(ts);
+    }
+}
+
+6 Write a Java program to iterate through all elements in a tree set.
+
+
+import java.util.Iterator;
+import java.util.TreeSet;
+public class ColleAssig {
+public static void main(String[] args) {
+TreeSet ts=new TreeSet<>();
+ts.add("yellow");
+ts.add("green");
+ts.add("black");
+ts.add("red");
+ts.add("pink");
+ts.add("brown");
+ts.add("white");
+Iterator itr=ts.iterator();
+while(itr.hasNext()){
+System.out.println(itr.next());
+}
+}
+}
+
+7. Write a Java program to add all the elements of a specified tree set to another tree set.
+import java.util.TreeSet;
+public class ColleAssig {
+public static void main(String[] args) {
+TreeSet ts=new TreeSet<>();
+ts.add("yellow");
+ts.add("green");
+ts.add("black");
+ts.add("red");
+ts.add("pink");
+ts.add("brown");
+ts.add("white");
+System.out.println(ts);
+TreeSet ts2=new TreeSet<>();
+ts2.add("ram");
+ts2.add("Bharat");
+ts.addAll(ts2);
+System.out.println(ts);
+}
+}
+
+8. Write a Java program to create a reverse order view of the elements contained in a given tree set.
+
+import java.util.TreeSet;
+public class ColleAsig {
+public static void main(String[] args) {
+TreeSet ts=new TreeSet<>();
+ts.add("yellow");
+ts.add("green");
+ts.add("black");
+ts.add("red");
+ts.add("pink");
+ts.add("brown");
+ts.add("white");
+System.out.println(ts);
+// ts.descendingSet();
+System.out.println(ts.descendingSet());
+}
+}
+
+
+9. Write a Java program to get the first and last elements in a tree set.
+
+import java.util.TreeSet;
+public class ColleAsig {
+public static void main(String[] args) {
+TreeSet ts=new TreeSet<>();
+ts.add("yellow");
+ts.add("green");
+ts.add("black");
+ts.add("red");
+ts.add("pink");
+ts.add("brown");
+ts.add("white");
+System.out.println(ts);
+System.out.println(ts.first());
+System.out.println(ts.last());
+}
+}
+
+
+Java Collection: HashMap
+ 
+1. Write a Java program to associate the specified value with the specified key in a HashMap.
+import java.util.HashMap;
+public class ColleAsig{
+public static void main(String[] args) {
+HashMap hm=new HashMap<>();
+hm.add(1,"Shree");
+hm.add(2,"Krishna");
+hm.add(3,"govinda");
+hm.add(4,"hare ");
+hm.add(5,"aasha ");
+hm.add(6,"narayan");
+hm.add(7",york");
+hm.add(8,"vasu");
+System.out.println(hm);
+}
+}
+
+
+2. Write a Java program to count the number of key-value (size) mappings in a map
+import java.util.HashMap;
+public class CollecAsig {
+public static void main(String[] args) {
+HashMap hm=new HashMap<>();
+hm.add(1,"Shree");
+hm.add(2,"Krishna");
+hm.add(3,"govinda");
+hm.add(4,"hare ");
+hm.add(5,"aasha ");
+hm.add(6,"narayan");
+hm.add(7",york");
+hm.add(8,"vasu");
+System.out.println(hm);
+System.out.println("the size of HashMap"+hm.size());
+}
+}
+
+3. Write a Java program to copy all mappings from the specified map to another map.
+
+import java.util.HashMap;
+public class CollecAsig {
+public static void main(String[] args) {
+HashMap hm=new HashMap<>();
+hm.add(1,"Shree");
+hm.add(2,"Krishna");
+hm.add(3,"govinda");
+hm.add(4,"hare ");
+hm.add(5,"aasha ");
+hm.add(6,"narayan");
+hm.add(7",york");
+hm.add(8,"vasu");
+System.out.println(hm);
+
+HashMap hm2=new HashMap<>();
+hm2.put(1, "Swami");
+hm2.put(2, "vivekanand");
+hm2.put(9, "vivek");
+hm2.put(10, "Arya");
+System.out.println(hm2);
+hm2.putAll(hs);
+System.out.println(hm2);
+}
+}
+4. Write a Java program to remove all mappings from a map.
+import java.util.HashMap;
+public class CollecAsig {
+public static void main(String[] args) {
+HashMap hm=new HashMap<>();
+hm.add(1,"Shree");
+hm.add(2,"Krishna");
+hm.add(3,"govinda");
+hm.add(4,"hare ");
+hm.add(5,"aasha ");
+hm.add(6,"narayan");
+hm.add(7",york");
+hm.add(8,"vasu");
+System.out.println(hm);
+System.out.println(hm.remove(hm));
+System.out.println("the size of HashMap"+hm.size());
+System.out.println(hm.isEmpty());
+System.out.println(hm);
+}
+}
+5. Write a Java program to check whether a map contains key-value mappings (empty) or not.
+import java.util.HashMap;
+public class CollecAsig {
+public static void main(String[] args) {
+HashMap hm=new HashMap<>();
+hm.add(1,"Shree");
+hm.add(2,"Krishna");
+hm.add(3,"govinda");
+hm.add(4,"hare ");
+hm.add(5,"aasha ");
+hm.add(6,"narayan");
+hm.add(7",york");
+hm.add(8,"vasu");
+System.out.println(hm);
+System.out.println(hm.isEmpty());
+System.out.println(hm);
+System.out.println(hm.isEmpty());
+}
+}
+
+Java Collection: TreeMap Exercises [26 exercises with solution]
+ 
+1. Write a Java program to associate the specified value with the specified key in a TreeMap.
+import java.util.TreeMap;
+public class ColleAsig {
+public static void main(String[] args) {
+TreeMap tm=new TreeMap();
+tm.put(1,"radha");
+tm.put(2,"krishna");
+tm.put(3,"narayan");
+tm.put(4,"bhawana ");
+tm.put(5,"Shradha");
+System.out.println(tm)
+}
+}
+
+
+2. Write a Java program to copy Tree Map's content to another TreeMap.
+
+import java.util.TreeMap;
+public class ColleAsig{
+public static void main(String[] args) {
+TreeMap tm=new TreeMap();
+tm.put(1,"krishna");
+tm.put(2,"gopal");
+tm.put(3,"narayan ");
+tm.put(4,"radha");
+tm.put(5,"Shradha");
+System.out.println(tm);
+TreeMap tm2 =new TreeMap<>();
+tm2.put(1, "ratan");
+tm2.put(2, "Ashtha");
+tm2.put(6, "ratri");
+tm2.put(7, "Asha");
+System.out.println(tm2);
+
+tm.putAll(tm2);
+System.out.println(tm);
+}
+}
+
+3. Write a Java program to search for a key in a TreeMap.
+
+import java.util.TreeMap;
+public class ColleAsig {
+public static void main(String[] args) {
+TreeMap tm=new TreeMap();
+tm.put(1,"krishna");
+tm.put(2,"gopal");
+tm.put(3,"narayan");
+tm.put(4,"bhavana ");
+tm.put(5,"Shredevi");
+//tm.get(2);
+System.out.println(tm.get(4));
+}
+}
+4. Write a Java program to search for a value in a TreeMap.
+import java.util.TreeMap;
+public class ColleAsig {
+public static void main(String[] args) {
+TreeMap tm=new TreeMap();
+tm.put(1,"krishna");
+tm.put(2,"gopal");
+tm.put(3,"narayan");
+tm.put(4,"bhavana");
+tm.put(5,"Shredevi");
+System.out.println(tm.containsValue("bhavana"));
+System.out.println(tm.containsValue("gopal"));
+System.out.println(tm.containsValue("Asha"));
+
+}
+}
+5. Write a Java program to get all keys from a TreeMap.
+import java.util.TreeMap;
+public class ColleAsig {
+public static void main(String[] args) {
+TreeMap tm=new TreeMap();
+tm.put(1,"krishna");
+tm.put(2,"gopal");
+tm.put(3,"narayan");
+tm.put(4,"bhavana");
+tm.put(5,"Shredevi");
+
+// tm.keySet() method
+System.out.println(tm.keySet());
+}
+}

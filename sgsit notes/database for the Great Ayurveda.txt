@@ -1,0 +1,253 @@
+       
+     database for the Great Ayurveda (using sequalize)
+                   
+                    Admins
+
+    Users                               Doctors
+                                        
+ carts                               appoitments                                
+ cartItems                           consults                                                      
+ categories                          doctorsDetails
+ products
+ orders
+ orderitems
+ homeremedies
+ yoga
+ contacts
+ paymentDetails
+ diseases
+
+
+
+ admins
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| id        | int          | NO   | PRI | NULL    | auto_increment |
+| name      | varchar(255) | NO   |     | NULL    |                |
+| email     | varchar(255) | NO   | UNI | NULL    |                |
+| password  | varchar(255) | NO   |     | NULL    |                |
+| createdAt | datetime     | NO   |     | NULL    |                |
+| updatedAt | datetime     | NO   |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+
+users
+
+ Field         | Type         | Null | Key | Default | Extra          |
++---------------+--------------+------+-----+---------+----------------+
+| id            | int          | NO   | PRI | NULL    | auto_increment |
+| name          | varchar(255) | NO   |     | NULL    |                |
+| email         | varchar(255) | NO   | UNI | NULL    |                |
+| password      | varchar(255) | NO   |     | NULL    |                |
+| contactNumber | varchar(10)  | NO   | UNI | NULL    |                |
+| gender        | varchar(255) | YES  |     | NULL    |                |
+| state         | varchar(255) | YES  |     | NULL    |                |
+| city          | varchar(255) | YES  |     | NULL    |                |
+| address       | varchar(255) | YES  |     | NULL    |                |
+| pincode       | varchar(255) | YES  |     | NULL    |                |
+| createdAt     | datetime     | NO   |     | NULL    |                |
+| updatedAt     | datetime     | NO   |     | NULL    |                |
+
+
+ doctors
++--------------------+--------------+------+-----+---------+----------------+
+| Field              | Type         | Null | Key | Default | Extra          |
++--------------------+--------------+------+-----+---------+----------------+
+| id                 | int          | NO   | PRI | NULL    | auto_increment |
+| doctorName         | varchar(255) | NO   |     | NULL    |                |
+| email              | varchar(255) | NO   | UNI | NULL    |                |
+| password           | varchar(255) | NO   |     | NULL    |                |
+| contactNumber      | varchar(255) | NO   | UNI | NULL    |                |
+| registrationNumber | varchar(255) | NO   | UNI | NULL    |                |
+| createdAt          | datetime     | NO   |     | NULL    |                |
+| updatedAt          | datetime     | NO   |     | NULL    |                |
++--------------------+--------------+------+-----+---------+----------------+
+
+carts
++-----------+----------+------+-----+---------+----------------+
+| Field     | Type     | Null | Key | Default | Extra          |
++-----------+----------+------+-----+---------+----------------+
+| id        | int      | NO   | PRI | NULL    | auto_increment |
+| createdAt | datetime | NO   |     | NULL    |                |
+| updatedAt | datetime | NO   |     | NULL    |                |
+| userId    | int      | YES  | MUL | NULL    |                |
++-----------+----------+------+-----+---------+----------------+
+
+cartitems
++-----------+----------+------+-----+---------+----------------+
+| Field     | Type     | Null | Key | Default | Extra          |
++-----------+----------+------+-----+---------+----------------+
+| id        | int      | NO   | PRI | NULL    | auto_increment |
+| quantity  | int      | NO   |     | 1       |                |
+| createdAt | datetime | NO   |     | NULL    |                |
+| updatedAt | datetime | NO   |     | NULL    |                |
+| cartId    | int      | YES  | MUL | NULL    |                |
+| productId | int      | YES  | MUL | NULL    |                |
++-----------+----------+------+-----+---------+----------------+
+
+
+ categories
++--------------+---------------+------+-----+---------+-------+
+| Field        | Type          | Null | Key | Default | Extra |
++--------------+---------------+------+-----+---------+-------+
+| categoryName | varchar(255)  | NO   | PRI | NULL    |       |
+| Causes       | varchar(1000) | NO   |     | NULL    |       |
+| Precaution   | varchar(1000) | NO   |     | NULL    |       |
+| imageUrl     | varchar(1000) | NO   |     | NULL    |       |
+| createdAt    | datetime      | NO   |     | NULL    |       |
+| updatedAt    | datetime      | NO   |     | NULL    |       |
++--------------+---------------+------+-----+---------+-------+
+
+products
++--------------+---------------+------+-----+---------+----------------+
+| Field        | Type          | Null | Key | Default | Extra          |
++--------------+---------------+------+-----+---------+----------------+
+| id           | int           | NO   | PRI | NULL    | auto_increment |
+| title        | varchar(255)  | NO   |     | NULL    |                |
+| brand        | varchar(255)  | NO   |     | NULL    |                |
+| price        | decimal(10,2) | NO   |     | NULL    |                |
+| description  | varchar(1000) | NO   |     | NULL    |                |
+| imageUrl     | varchar(1000) | NO   |     | NULL    |                |
+| rating       | int           | NO   |     | NULL    |                |
+| categoryname | varchar(255)  | YES  | MUL | NULL    |                |
+| createdAt    | datetime      | NO   |     | NULL    |                |
+| updatedAt    | datetime      | NO   |     | NULL    |                |
++--------------+---------------+------+-----+---------+----------------+
+
+ orders
++-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| id          | int          | NO   | PRI | NULL    | auto_increment |
+| FullName    | varchar(255) | NO   |     | NULL    |                |
+| OrderDate   | varchar(255) | NO   |     | NULL    |                |
+| State       | varchar(255) | NO   |     | NULL    |                |
+| City        | varchar(255) | NO   |     | NULL    |                |
+| Address     | varchar(255) | NO   |     | NULL    |                |
+| Pincode     | varchar(255) | NO   |     | NULL    |                |
+| UserContact | varchar(10)  | NO   |     | NULL    |                |
+| status      | varchar(255) | NO   |     | NULL    |                |
+| userId      | int          | NO   | MUL | NULL    |                |
+| createdAt   | datetime     | NO   |     | NULL    |                |
+| updatedAt   | datetime     | NO   |     | NULL    |                |
++-------------+--------------+------+-----+---------+----------------+
+
+ orderitems
++-----------+----------+------+-----+---------+----------------+
+| Field     | Type     | Null | Key | Default | Extra          |
++-----------+----------+------+-----+---------+----------------+
+| id        | int      | NO   | PRI | NULL    | auto_increment |
+| productId | int      | NO   | MUL | NULL    |                |
+| Quantity  | int      | NO   |     | NULL    |                |
+| orderId   | int      | NO   | MUL | NULL    |                |
+| createdAt | datetime | NO   |     | NULL    |                |
+| updatedAt | datetime | NO   |     | NULL    |                |
++-----------+----------+------+-----+---------+----------------+
+
+
+ homeremedies
++--------------+--------------+------+-----+---------+----------------+
+| Field        | Type         | Null | Key | Default | Extra          |
++--------------+--------------+------+-----+---------+----------------+
+| id           | int          | NO   | PRI | NULL    | auto_increment |
+| remedyName   | varchar(255) | NO   | UNI | NULL    |                |
+| description  | text         | NO   |     | NULL    |                |
+| ingredients  | text         | NO   |     | NULL    |                |
+| instructions | text         | NO   |     | NULL    |                |
+| imageUrl     | varchar(255) | NO   |     | NULL    |                |
+| caution      | text         | NO   |     | NULL    |                |
+| categoryname | varchar(255) | YES  | MUL | NULL    |                |
+| createdAt    | datetime     | NO   |     | NULL    |                |
+| updatedAt    | datetime     | NO   |     | NULL    |                |
++--------------+--------------+------+-----+---------+----------------+
+
+
+ yoga
++--------------+--------------+------+-----+---------+----------------+
+| Field        | Type         | Null | Key | Default | Extra          |
++--------------+--------------+------+-----+---------+----------------+
+| id           | int          | NO   | PRI | NULL    | auto_increment |
+| yogaName     | varchar(255) | NO   |     | NULL    |                |
+| benefits     | text         | NO   |     | NULL    |                |
+| instructions | text         | NO   |     | NULL    |                |
+| imageUrl     | varchar(255) | NO   |     | NULL    |                |
+| videoUrl     | varchar(255) | NO   |     | NULL    |                |
+| categoryname | varchar(255) | YES  | MUL | NULL    |                |
+| createdAt    | datetime     | NO   |     | NULL    |                |
+| updatedAt    | datetime     | NO   |     | NULL    |                |
++--------------+--------------+------+-----+---------+----------------+
+
+contacts
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| id        | int          | NO   | PRI | NULL    | auto_increment |
+| name      | varchar(255) | NO   |     | NULL    |                |
+| email     | varchar(255) | NO   | UNI | NULL    |                |
+| phone     | varchar(255) | NO   | UNI | NULL    |                |
+| subject   | text         | NO   |     | NULL    |                |
+| message   | text         | NO   |     | NULL    |                |
+| createdAt | datetime     | NO   |     | NULL    |                |
+| updatedAt | datetime     | NO   |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+
+paymenttables
++---------------------+--------------+------+-----+---------+----------------+
+| Field               | Type         | Null | Key | Default | Extra          |
++---------------------+--------------+------+-----+---------+----------------+
+| id                  | int          | NO   | PRI | NULL    | auto_increment |
+| razorpay_order_id   | varchar(255) | NO   |     | NULL    |                |
+| razorpay_payment_id | varchar(255) | NO   |     | NULL    |                |
+| razorpay_signature  | varchar(255) | NO   |     | NULL    |                |
+| createdAt           | datetime     | NO   |     | NULL    |                |
+| updatedAt           | datetime     | NO   |     | NULL    |                |
++---------------------+--------------+------+-----+---------+----------------+
+
+ appointments
++-----------------+--------------+------+-----+---------+----------------+
+| Field           | Type         | Null | Key | Default | Extra          |
++-----------------+--------------+------+-----+---------+----------------+
+| id              | int          | NO   | PRI | NULL    | auto_increment |
+| name            | varchar(255) | NO   |     | NULL    |                |
+| phone           | varchar(255) | NO   |     | NULL    |                |
+| age             | int          | NO   |     | NULL    |                |
+| email           | varchar(255) | NO   |     | NULL    |                |
+| gender          | varchar(255) | NO   |     | NULL    |                |
+| appointmentDate | varchar(255) | NO   |     | NULL    |                |
+| appointmentTime | varchar(255) | NO   |     | NULL    |                |
+| status          | varchar(255) | NO   |     | NULL    |                |
+| doctorId        | int          | NO   | MUL | NULL    |                |
+| createdAt       | datetime     | NO   |     | NULL    |                |
+| updatedAt       | datetime     | NO   |     | NULL    |                |
++-----------------+--------------+------+-----+---------+----------------+
+
+ consults
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| id        | int          | NO   | PRI | NULL    | auto_increment |
+| name      | varchar(255) | NO   |     | NULL    |                |
+| phone     | varchar(255) | NO   | UNI | NULL    |                |
+| doctorId  | int          | YES  | MUL | NULL    |                |
+| message   | text         | NO   |     | NULL    |                |
+| createdAt | datetime     | NO   |     | NULL    |                |
+| updatedAt | datetime     | NO   |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+
+ doctordetails
++----------------+-------------------------------+------+-----+---------+----------------+
+| Field          | Type                          | Null | Key | Default | Extra          |
++----------------+-------------------------------+------+-----+---------+----------------+
+| id             | int                           | NO   | PRI | NULL    | auto_increment |
+| qualification  | varchar(255)                  | NO   |     | NULL    |                |
+| experience     | int                           | NO   |     | NULL    |                |
+| gender         | enum('male','female','other') | YES  |     | NULL    |                |
+| language       | varchar(255)                  | NO   |     | NULL    |                |
+| time           | varchar(255)                  | NO   |     | NULL    |                |
+| clinicAddress  | text                          | NO   |     | NULL    |                |
+| doctorimage    | text                          | NO   |     | NULL    |                |
+| specialization | varchar(255)                  | NO   |     | NULL    |                |
+| doctorId       | int                           | YES  | MUL | NULL    |                |
+| createdAt      | datetime                      | NO   |     | NULL    |                |
+| updatedAt      | datetime                      | NO   |     | NULL    |                |
++----------------+-------------------------------+------+-----+---------+----------------+

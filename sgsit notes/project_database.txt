@@ -1,0 +1,218 @@
+Database for vedaroot Project
+      
+collections
+             
+ 1.Admins
+ 2.Users                                                                     
+ 3.carts                                                               
+ 4.cartItems                                                                                 
+ 5.categories                          
+ 6.products
+ 7.orders
+ 8.orderitems
+ 9.homeremedies
+ 10.yoga
+ 11.contacts
+ 12.paymentDetails
+ 13.diseases
+ 14.Doctors
+ 15.doctorsDetails
+ 16.appoitments
+ 17.consults
+
+
+   Admin
+1. id ---->pk
+2. name
+3. email---->unique
+4. password
+5. Last Login----DateTime(type)
+
+   User
+1. id-----pk
+2.userName
+3.email-------unique
+4.password
+5.contactNo------unique
+6.address
+7.city
+8.state
+9.pin code
+10.lastlogin
+11.gender
+
+  category
+1.categoryId---->pk
+2.categoryName
+3.description
+4.imageUrl 
+
+
+   product
+1.productId---->pk
+2.productName(title)
+3.description
+4.price
+5.discount price
+6.stock(quantity)
+7.rating
+8.imageUrl----(varchar)
+10.categoryId--->fk
+11.brand
+12.tags
+
+
+  Yoga
+1.id---->pk
+2.yogaName
+3.benefits
+4.description
+5.imageUrl
+6.categoryId--->fk
+7.videoUrl
+8.instructions
+
+   HomeRemedies
+1.homeremediesId
+2.homeremedyName
+3.ingredients
+4.description
+5.instructions
+6.imageUrl
+7.caution
+8.categoryId--->fk
+
+   carts
+1.cartId---->pk
+2.userId---->fk
+
+   cartitems
+1.cartitemsId----->pk
+2.cartId------->fk
+3.productId------>fk
+4.quantity
+5.price
+
+
+   order
+1.orderId----->pk
+2.userId----->fk
+3.orderdate
+4.Total_amount
+5.status(pending,completed,shipped)
+6.shipping_address
+7.city
+8.state
+9.fullname
+10.user_contact
+11.pin_code
+
+
+  orderDetail 
+1.orderItemId--->pk
+2.orderId----->fk
+3.product_id----->fk
+4.quantity
+5.price
+6.discount
+ 
+
+  contact
+1.contactId----->pk
+2.userId------>fk
+3.Name
+4.email
+5.phone_no
+6.subject_of_inquiry
+7.message
+8.status(new,in progress,resolved)
+
+--------------------------------------
+
+    Doctor
+1.DoctorId---->pk
+2.name
+3.email------unique
+4.password
+5.contactNo-----unique
+6.registrationNo------unique
+7.specialization
+
+
+
+   Doctor_details
+1.DoctorDetailsId----->pk
+2.DoctorId------>fk
+3.time        
+4.qualification
+5.experience years
+6.clinicName
+7.clinicAddress
+8.contact_no
+9.email
+10.bio(profile_description)
+11.consultation fee
+12.availability(time)
+13.profilePicture(doctorImage)
+14.gender
+
+
+   consultation
+1.consultation_id----->pk
+2.name
+3.DoctorId----->fk
+4.consultationDate
+5.status(pending,completed,canceled)
+6.phone no
+7.message
+8.userId
+
+   Appointment
+1.appointmentId----->pk
+2.userId----->fk
+3.DoctorId----->fk
+4.AppointmentDate,Time
+5.Status(scheduled,completed,canceled)
+6.phone_no
+7.name
+8.age
+9.gender
+10.email
+
+
+Payment_Details
+---------------
+1. id (Primary Key)
+2. userId (Foreign Key to Users table)
+3. orderId (Foreign Key to Orders table)
+4. Razorpay_orderId
+5. Razorpay_paymentId
+6. Razorpay_signature
+7. payment_status (e.g., paid, pending, failed)
+8. payment_method (e.g., credit_card, COD)
+9. amount (Total payment amount for this transaction)
+
+   Diseases
+1.id----pk
+2.diseasesName
+3.description
+4.symptoms
+5.causes
+6.treatment
+7.categoryId----->fk
+8.precautions
+9.imageUrl
+
+
+
+
+
+
+
+
+
+
+
+
+
+

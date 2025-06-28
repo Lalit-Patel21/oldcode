@@ -1,0 +1,194 @@
+Project last update database
+1.	Admin
+o	id (PK)
+o	name
+o	email (Unique)
+o	password
+o	lastLogin
+2.	User
+o	id (PK)
+o	userName
+o	email (Unique)
+o	password
+o	contactNo (Unique)
+o	address
+o	city
+o	state
+o	pinCode
+o	lastLogin
+o	gender
+3.	Category
+o	categoryId (PK)
+o	categoryName
+o	description
+o	imageUrl
+4.	Product
+o	productId (PK)
+o	productName
+o	description
+o	price
+o	discountPrice
+o	stock
+o	rating
+o	imageUrl
+o	categoryId (FK)
+o	brand
+o	tags
+5.	Yoga
+o	id (PK)
+o	yogaName
+o	benefits
+o	description
+o	imageUrl
+o	categoryId (FK)
+o	videoUrl
+o	instructions
+6.	HomeRemedies
+o	homeremediesId (PK)
+o	homeremedyName
+o	ingredients
+o	description
+o	instructions
+o	imageUrl
+o	caution
+o	categoryId (FK)
+7.	Cart
+o	cartId (PK)
+o	userId (FK)
+8.	CartItems
+o	cartitemsId (PK)
+o	cartId (FK)
+o	productId (FK)
+o	quantity
+o	price
+9.	Order
+o	orderId (PK)
+o	userId (FK)
+o	orderDate
+o	totalAmount
+o	status
+o	shippingAddress
+o	city
+o	state
+o	fullName
+o	userContact
+o	pinCode
+10.	OrderItems
+o	orderItemId (PK)
+o	orderId (FK)
+o	productId (FK)
+o	quantity
+o	price
+o	discount
+11.	Contact
+o	contactId (PK)
+o	userId (FK)
+o	name
+o	email
+o	phoneNo
+o	subjectOfInquiry
+o	message
+o	status
+12.	Doctor
+o	doctorId (PK)
+o	name
+o	email (Unique)
+o	password
+o	contactNo (Unique)
+o	registrationNo (Unique)
+o	specialization
+13.	DoctorDetails
+o	doctorDetailsId (PK)
+o	doctorId (FK)
+o	time
+o	qualification
+o	experienceYears
+o	clinicName
+o	clinicAddress
+o	contactNo
+o	email
+o	bio
+o	consultationFee
+o	availability
+o	profilePicture
+o	gender
+14.	Consultation
+o	consultationId (PK)
+o	name
+o	doctorId (FK)
+o	consultationDate
+o	status
+o	phoneNo
+o	message
+o	userId (FK)
+15.	Appointment
+o	appointmentId (PK)
+o	userId (FK)
+o	doctorId (FK)
+o	appointmentDateTime
+o	status
+o	phoneNo
+o	name
+o	age
+o	gender
+o	email
+
+16.Payment_Details
+---------------
+1. id (Primary Key)
+2. userId (Foreign Key to Users table)
+3. orderId (Foreign Key to Orders table)
+4. Razorpay_orderId
+5. Razorpay_paymentId
+6. Razorpay_signature
+7. payment_status (e.g., paid, pending, failed)
+8. payment_method (e.g., credit_card, COD)
+9. amount (Total payment amount for this transaction)
+
+17.	Diseases
+o	id (PK)
+o	diseaseName
+o	description
+o	symptoms
+o	causes
+o	treatment
+o	categoryId (FK)
+o	precautions
+o	imageUrl
+
+     Relationships
+1.	User and Cart
+o	One-to-One: One User has one Cart.
+2.	Cart and CartItems
+o	One-to-Many: One Cart can have many CartItems.
+3.	CartItems and Product
+o	Many-to-One: Many CartItems belong to one Product.
+4.	Category and Product
+o	One-to-Many: One Category has many Products.
+5.	Order and User
+o	Many-to-One: Many Orders belong to one User.
+6.	Order and OrderItems
+o	One-to-Many: One Order can have many OrderItems.
+7.	OrderItems and Product
+o	Many-to-One: Many OrderItems belong to one Product.
+8.	Contact and User
+o	Many-to-One: Many Contacts belong to one User.
+9.	Doctor and DoctorDetails
+o	One-to-One: One Doctor has one set of DoctorDetails.
+10.	Consultation and Doctor
+o	Many-to-One: Many Consultations belong to one Doctor.
+11.	Consultation and User
+o	Many-to-One: Many Consultations belong to one User.
+12.	Appointment and User
+o	Many-to-One: Many Appointments belong to one User.
+13.	Appointment and Doctor
+o	Many-to-One: Many Appointments belong to one Doctor.
+14.	Category and Yoga
+o	One-to-Many: One Category has many Yoga practices.
+15.	Category and HomeRemedies
+o	One-to-Many: One Category has many HomeRemedies.
+16.	Diseases and Category
+o	Many-to-One: Many Diseases belong to one Category.
+17.	Order and user
+       One Order can have one Payment_Details record (One-to-One).
+       One User can have multiple Payment_Details records (One-to-Many).

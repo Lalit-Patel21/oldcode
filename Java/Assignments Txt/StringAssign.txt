@@ -1,0 +1,85 @@
+1) What is String in java? What  do you mean by mutability and immutability?
+
+String is a built-in java class which is under java lang package and string is immutable.
+(a) Everything that is written in string is an object for the java. 
+(b) Two ways to make a string is 
+  (i) With new keyword : String str = new String (“Hello”) ; 
+    It makes object in 2 places SCP and in Heap Memory.
+  (ii)	With String Literal : String str = “Hello “ ;
+    It makes object in only 1 place in scp 
+(c) When we modify a String , java (in background ) creates a new object ,rather then modifying it.
+
+
+2) What is diffenence b/w String , SrtingBuffer and StringBuilder?
+Explain with example.
+
+String : String is a Final and Immutable class.
+
+SrtingBuffer: SrtingBuffer is mutable and thread safe class of java
+              it is Slower. 
+StringBuilder:StringBuilder is a mutable and not thread safe class of java.
+              it is faster .
+3) What is difference b/w == operator and String class equals() method?
+
+( == ) , operator is used to check whether the 2 strings are sharing same memory location or having different memory location .  (eg. : a == b )
+
+.equals() method is a string class method , that is used to check whether 2 strings are having same data or not . ( eg : sc = a.equals(b))
+(a)	If it returns 0; that means the values of 2 strings are same .
+(b) if it returns a +ve value that means "a" is greater  (as per example)
+(c) if it returns a -ve value that means "b" is greater (as per exaple)
+
+
+4) How many ways to initialize String  in java? Explain role of String literal pool.
+There are 2 ways to initilize a atring in java.
+(a) by new keyword , String a = new String ("hello");
+(b) by method , String b = " welcome " ;
+
+
+5) Write a java program to reverse each word of String.
+	Sample Input: “Java Is Plateform Independent”
+	Output: “avaJ sI mrofetalP tnednepednI”
+
+
+
+6) Write a java program to find all possible palindrom of given String.
+	Sample Input: “aaabbbacccababacccaabb”
+
+
+7)WAP to remove the duplicate letters from given String.
+	Sample Input: “aabbccddd”
+	Output: “abcd”
+
+
+8) WAP to find out total occurrence of each letter in string.
+	 Sample Input: “aabbccddd”
+	 Output:   a- 2 times
+			b- 2 times
+			c- 2 times
+			d- 3 times
+
+
+
+9) WAP to find word of maximum length in given String.
+	Sample Input: “Dear Student ,You have need to work hard”
+`	Output: “Student”
+
+
+10) WAP to count the word whose first letter is  vowel.
+
+
+11) Input name of a person and count how many vowels it contains. Use String class methods.
+
+
+12) Input data exactly in the following format, and print sum of all integer values.
+	Sample Input: “67, 89, 23, 67, 12, 55, 66”. (Hint use String class split method and Integer class parseInt method)
+
+
+13)WAP check if two Strings are anagrams of each other?
+(Hint Anagram words: LISTEN - SILENT 
+				  TRIANGLE - INTEGRAL)
+
+
+
+14) WAP check if a String contains only digits?
+
+

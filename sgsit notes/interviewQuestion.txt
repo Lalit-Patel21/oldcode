@@ -1,0 +1,803 @@
+npm init;
+npm i express ejs mysql2 body-parser;
+
+create table admin(id int primary key auto_increment,
+     email varchar(100) not null unique key,
+     password varchar(10) not null);
+
+insert into admin (email,password ) values('test@gmail.com','1234');
+
+CREATE TABLE category (
+    category_id INT PRIMARY KEY AUTO_INCREMENT,
+    category_name VARCHAR(100) NOT NULL UNIQUE
+);
+
+ insert into category (category_Name) value(?)
+
+INSERT INTO category (category_name) VALUES ('Electronics');
+INSERT INTO category (category_name) VALUES ('Furniture');
+INSERT INTO category (category_name) VALUES ('Stationery');
+INSERT INTO category (category_name) VALUES ('Clothing');
+
+
+
+CREATE TABLE product (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(100) NOT NULL UNIQUE,
+    price INT NOT NULL,
+    category_id INT NOT NULL,
+    FOREIGN KEY (category_id) REFERENCES category(category_id)
+);
+
+
+
+INSERT INTO product (title, price, category_id) VALUES ('Laptop', 60000, 1);
+INSERT INTO product (title, price, category_id) VALUES ('Chair', 2000, 2);
+INSERT INTO product (title, price, category_id) VALUES ('Notebook', 50, 3);
+INSERT INTO product (title, price, category_id) VALUES ('T-Shirt', 500, 4);
+
+SELECT p.id, p.title, p.price, c.category_name 
+FROM product p
+JOIN category c ON p.category_id = c.category_id;
+
+
+"SELECT p.id, p.name AS p.title, p.price, c.name AS  category_id FROM product p JOIN category c ON p.category_id = c.id;"
+
+
+
+gruop-5
+
+how we can cteate class in js.
+what is constructor function.
+
+
+gruop-4
+
+  Rukhmani
+1.) feature of js.
+2.) framework of js.
+3.) what is node. why we use nodejs.
+4.) what is paradigm.
+5.) function parameter and function argument.
+6.) rest operator
+7.) how can we rempve bullet from unordered list.
+8.) diff. b/w tag and attribute.
+9.) create a form using Html.(name field button ).
+10.) how can we concate two string without + operator.
+11.) 5 Bootstrap class name.
+12.) different b/w internal inline and external css.
+13.) what is diff. b/w href and src.
+14.) pop method and what is it  return.
+
+
+
+Questions asked in morning 
+
+ Mansi Bisore
+What is JavaScript ?
+Is javaScript dynamic typed language ?
+What is dynamic typed language ?
+DOM ?
+NULL vs Undefined ?
+typeof ?
+Hoisting ?
+let and const hoisted ?
+Temporal dead zone ?
+What is css ?
+Bootstrap ?
+Margin ?
+Container and Container-fluid ?
+program on array usign filter ?
+5+"1"+-1 = ?
+
+  Chanchal
+Falsy values ?
+filter ?
+client-side ?
+server-side ?
+where is v8 engine ?
+compiler in edge ?
+call stack ?
+call bind and apply ?
+closure ?
+function curring ?
+scope chaining ?
+higher order function ?
+fuction expression and function execution ?
+hoisting in function ?
+why js is lightweight ?
+callback syntax ?
+null==undefined
+null===undefined
+async and await 
+json
+json to js object 
+
+
+	Varsha
+Closure ?
+lexical environment ?
+Object ?
+Where to use null and undefined ?
+promise ?
+ways to handle promise ?
+scope chaining ?
+lexical environment ?
+array ?
+Json obj ?
+
+
+	Swati
+callback hell ?
+construction function ?
+temoral dead zone ?
+data encapsulation in js
+generator function ?
+call stack ?
+constructor ?
+slice splice ?
+const and change in array ?
+map and example ?
+css practical ?
+reverse array ?
+isNaN() ?
+
+
+	Rukhmani
+features of js ?
+what is open source ?
+Framework of js ?
+node ?
+why we use node ?
+paradigm ?
+function parameter and argument ?
+remove bullet from list ?
+make a form ?
+tags vs Attributes  ?
+string interpoletion ?
+internal vs inline vs externale css ?
+5 class of bootstrap ?
+pop ?
+src vs href ?
+
+
+   Archana 
+pop ?
+splice parameter ?
+readfile and readfilesync ?
+spread vs rest ?
+shallow vs deep copy ?
+html form ?
+closure ?
+responsive website ?
+metadata ?
+html entities ?
+array target variable ?
+
+
+
+	Monika 
+undecare and undefined variable ?
+let and var ?
+const a ?
+ways to create object ?
+constructor function ?
+Js file question ?
+callback ?
+async await ?
+window vs document ?
+!!""=== !!NaN ?
+void(0)
+http verbs ?
+array reverse ?
+
+
+
+    Yogita 
+HTML and CSS ?
+5 bootstrap classes ?
+container and container-fluid ?
+scope chaining ?
+types of datatypes in js ?
+hoisting ?
+async awit ?
+pattern ?
+synchronous and asynchronous ?
+blocking and non-blocking ?
+is HTML case-sensitive ?
+what is node ?
+
+
+     Mansi
+HTML CSS ?
+Media query ?
+5 Bootstrap classes ?
+Table ?
+typeof ?
+Anonymous function ?
+closure and its advantage ?
+Json ?
+ways of creating an object ?
+create a js object ?
+js object to json ?
+HTTP
+changes in package.json to use import ?
+sum all elements of array ?
+
+
+       divya 
+
+1. lexical environment
+2. scope chaning
+3. arrays methods diff b/w slice and splice
+4. dif. b/w synchronous and asynchrounus
+5. how nodejs  handle asynchronous code
+6. types of module in nodejs(dependencies) explain event module /event module methods
+7. methods of event module.
+8. package.json what change need to required to import any module.
+9. what node module contain.
+10.pattern (time complexity).
+
+     kirti
+
+1. what is node js.
+2. how nodejs handle asynchronous code
+3. what is promises and how nodejs handle promise
+4. what is callback and callback hell.
+5. if we have multiple depended task than how can we handle (why the ).
+6. what is promise.all method.
+7. http module in nodejs.
+8. types of module in nodejs.
+9. diff. b/w fs  and file stream.and when we use them. what advantage of file steam.
+10. pattern 
+
+
+       Vaishali 
+1. clouser and diif b/w clouser and scope chaining.
+2. lexical environment.
+3. what does push/pop method return. does push/pop method manipulated the array.
+4. what is diff. b/w java array and js array.
+5. array of string and then arr.toString() print.
+6. what is nodejs. event module in nodejs. 
+7. http module. which methods used to create server.
+8.  http verbs
+9.  
+
+    muskan
+1. hoisting.
+2. lexical environment.
+3. purpose of slice method.
+4. what is object. how many types we can create object.
+5. how many types we can declare a variable.
+6. how many data types in js.
+7. array methods. explain working.
+8. what is js.
+9. pattern.
+10.
+
+        sakshi
+1. why we use let in place of var.
+2. closure in js.explain with example.
+3. why string primitive in js.
+4. how many types we can create a object in js.
+5. pattern 
+6. diff. b/w slice and splice 
+7. what is return type of slice and splice.
+8. return type of push and pop method 
+9. types of module and why we use express listen method.
+
+
+      nikita
+1. promise in js.
+2. if we have multiple depended tasks than how can we handle them (without asyc and awaitS).
+3. clouser in js. diff. b/w clouser and scope chaining.Example?
+4. lexical environment.
+5. function currying.syntax.
+6.middleware 
+7. async and await
+8. types of module in nodejs. why we used url and path module in nodejs.
+9. event module 
+10. pattern.
+
+
+   Saloni chouhan
+
+1.what is js what is multiparadigm and dynamically typed?
+2.what do you mean by oops.
+3.lexical environment?
+4.splice method of array?    
+5.diff. b/w parameter and argument.and rest and spread operator.
+6.constructor function in js why we need it?
+7.class in js with example
+8.promise in js?
+9.why string is primitive?
+10 create a array of integer and filter even number from it?
+
+
+    Avantika 
+1.what does filter method return (type of) ?
+2.what is datatype? types of DT?
+3.call method?
+4.how many type we can create an array in js?
+5.callback function?
+6.hoisting.?
+7. dif. b/w let and const and var?
+8. lexical environment? and scope chaining? 
+9. what is return type of push,pop method?
+10. pattern
+ *
+ **
+ ***
+ 
+   Swasti
+1. what is json? and why we use it?
+2. hoisting ?
+3. js is compiler or interpreter language?
+4. what do you mean by global and local lexical scope? diff.
+5. promise? p1,p2,p3 are three promise
+6. what is middleware? and types?
+7. methods of http mudule?
+8. http verbs and diff. b/w get and post method?
+9. what is diff. b/w package.json and package-lock.json? when package.json file      create? 
+10. types of dependencies/modules ?
+11.how can we achieve inheritance in js?
+
+
+Poornima 
+1. callback function? and HOF?
+2. closure? with Example? lexical environment?
+3. multiparadigm language?
+4. how can we declare variable in class? a static var. 
+5. and how we create constructor in class?  
+6. and diff. b/w constructor and this.constructor?
+7. if we create a .js file than which properties created?
+   (window callstack lexical environment)
+8. and how can we achieve many to many relation in sequalize?
+9. what do you mean by session module in nodejs?
+10.  *****
+     *  *
+     * *
+     **
+     *
+
+
+
+  savari
+1. explain the callstack? 
+2. function declaration is hoisted  and expression not why?
+3. why js is multiparadigm? functuinal programming in js?
+4. method of array? and its return type? slice?
+5. callback function.with example?
+6. callback error?
+7.  hoisting?
+8.  what is HOF?
+9.  *****
+    ****
+    ***
+    **
+    *
+
+
+  sonali choudary
+
+1. what is HOF?
+2. how we can achieve function currying? / function chaining? 
+    situation when we use currying function?
+3.  json vs js Object
+4.how js handle ashychronous task? 
+5.promise and all and all settled method
+6.lexical environment?
+7.any 5 dependies of nodejs?
+8. how can we replace values in array with example? with splice method?
+9.
+
+   Nandani bachhani
+
+1. promise. why what and how?     (right)
+2. promise chaining?              (wrong)
+3. diff. b/w  callback queue and microtask queue. (wrong)
+4. explain call bind and apply.(wrong)
+5. diff. b/w function statement and function expression? (right)
+6. dif. b/w json object and object.  (right)
+7. closure .
+8. http module(methods).
+9. what is callStack.
+10. reverse a array without reversing loop.
+
+
+   jyoti
+1. lexical environment? closure.
+2. execution context? what in case of function?
+3. diff. b/w closure and scope chaining.
+4. async and await
+5. what is node module? when does node module create?
+6.  diff. b/w fs and file stream?
+7. how many type dependencies we have?
+8. http module and http methods?
+9.
+
+  trapti Patel
+1. ds in callstack? lexical environment?
+2. package.json and package-lock.json
+3. closure. scope chaining
+4.  diff. b/w closure and scope chaining.
+5.  promise depended and promise independed.
+6.  diff. b/w promise chaining and async and await(why)?
+7.  what is an api ? middleware in express?
+8. call bind and apply ?
+9. what is promise?
+10.  * * * * *
+      * * * *
+       * * *
+        * *
+         *
+
+  priyanshi sharma
+1. what is console and log? (dif. b/w methods and function)
+2. types of function?
+3. what dependecies need to install to use sequalize?
+4. what is return type of sequalize method?
+5. what type of method .catch()? .finally method.
+6. diff b/w callback queue and microtask queue?
+7. names of dependies we use in nodejs.why we used body-parser.
+8. shallow and deepcopy? with example.
+9. callback hell? Example
+
+   Chanchal Patidar
+
+1. shallow and deepcopy? with example.
+2. which code execute first promise or settimeout and why?
+3. how js handle asynchronous code? 
+4. set interval and set timeout.
+5. promise ?
+6. class in js ? how we declare variable in js?
+7. diff. b/w fs and fs stream. 
+8. Event module in nodejs.
+9. middlware ?
+10. diff. b/w scope chaining and closure?
+
+   Akanksha
+1. closure? why we use closure? what does closure function return?
+2. names of dependencies used in nodejs.
+3. types of module in node ? what is type of url and path module in nodejs?  
+4. fs module in nodejs then what is diff. b/w fs and file stream?
+5. why we need to sequalize? diff. b/w dependencies mysql2 and sequalize?
+6. what will sequalize method return?
+7. diff. b/w class and constructor function.? 
+   when class introduce in js.why we need class in js? 
+8. String interpolation? / template literal
+9. Event module in nodejs? Event driven Architecture? 
+10. hoisting.
+    
+
+ Kanita
+1. expain the mvc architecture?
+2. what is route in js?
+3. what is hoisting?
+4. middleware? Expain any three types of middleware?
+5. how will you send data from client to server?(how many ways)
+6. closure in js?
+7. function currying?
+8. diff. b/w let var and const.
+9. what is json? why we used json?
+10. inheritance in js.class in js.
+when class introduce in js.why we need class in js? 
+11. print the average of array element?
+
+   
+  prerna sharma
+1.js array and java array
+2. slice and splice
+3.callback  hell
+5. diff. b/w lexical environment and scope chaining.
+6. MVC Architecture
+7. how many type we can create object in js
+8. if we create a .js file than which property created.
+9.session module in nodejs.
+10.sequilize. what is return type of sequalize methods?
+11. what keep you motivate to achieve your goal?
+12. average of array element present in array?
+
+  Shivani meena
+1.introduce your self.
+2.what make you eager to aquire new knowledge
+3.what is node. http module
+4. any five methods of array and their return type
+5. closure with example.
+6. what is difference b/w res.render and res.redirect.
+7. how can we send static file to client.
+8. how can we send data from client side to server side(body parser and url encoded).
+9. how can we pass dynamic url.
+10. how many type we can declare a variable.
+    and explain const type variable in term of primitive and non primitive 
+11.average of array element present in array?
+
+
+ mahima desmukh
+
+1. why should i hire you?
+2. tell me the reason which stand you different from crowd?
+3. what is express. why ? 
+4. is any other way to create a server except express?
+5. what is disadvantage of nodejs http module?
+6. can you explain call stack of js? and how it handle asynchronous task?
+   what happen in case of function. and what happen in case of object created in       jsfile?
+7. how json is different from js object? can we create 
+8.why we use promise.(2 reason)
+9.can you explain url and path module in nodejs?can you explain type of middleware.
+10.session-express module in nodejs?
+11.pattern
+
+  Priya yadav
+1. what is js? why js is Dynamically typed? disadvantage of js?
+2. define a const variable in term of primitive and non-primitive?
+    can we change value of non-primitive 
+3. scope chaining? role of lexical environment in scope chaining?
+4. object in js?
+5. why we use js in client side?
+6. why we create form in html? and attribute of forms?
+7. modules in nodejs? why we use module?
+8. what is template literal? what is ejs?
+9.hoisting in js. can we store a function in variable? 
+  explain ? that function can hoisted?
+10. what is closure ?
+11. write a program to create array and iterate the array if we get falsy value break the loop?
+
+
+
+
+date : 18-12-24
+
+  saloni chouhan
+
+1.introduce yourself.
+2.oops concept.
+3.how we create form tag in html?
+4.how many types of selectors in css? 
+5.what is js?
+6.reduce method ?
+7.sum of all array element?
+
+
+  jyoti
+
+1. introduce yourself.
+2. what is js?
+3. hoisting in js? if we do not want a variable to be host then what we do?
+4. closure?
+5. 
+6.what is nodejs?
+7.reduce method ?
+8.square of array element?
+
+
+ archana meena
+
+1. introduce yourself.
+2. selectors in css?
+3. diff. b/w redirect and render method of req. express?
+4. hoisting in js? if we do not want a variable to be host then what we do?
+5. working of fs module? why we use file stream? 
+6.callback function? hof?
+7. print the value of object from object array?
+
+ Vaishali rathore
+1. introduce yourself.
+2. what is js? why js is dynamically type?
+3. how does js handle asynchromous code in js?
+4. promises in js? how can we multiple promises code?(another way).
+5. selectors in css? if we want to make our page responsive 
+   than what we used in css.(without bootsrap framework).
+6. how can we hide any div. in js.?
+7. how can we access a method.
+
+sonali 
+1. introduce yourself.
+2. form tag in html?
+3. what is js?
+4. what is hoisting?if we do not want a variable to be host then what we do?
+5. constructor function? why we use constructor function?
+6. diff. b/w redirect and render method of req. express?
+7. factorial of any number.
+ 
+Muskan joshi
+1. introduce yourself.
+2. what is express? what is mvc Architecture? 
+3. how can we use static file in nodejs ?
+4. closure?
+5. data types in js? how many ways to declare a variable in js?
+6. input= [1,2,3,4,5] =>  output=[1,8,9,64,25]
+
+ chanchal akhlare
+1. introduce yourself.
+2. why did you change your field?
+3. why we use form tag in html? if we submit the form which type of object create?
+4. how we handle data that we send from client side? how can we access that data?
+5. dynamically route or url?
+6. what is event bubbling and event capturing?
+7. promise.and methods of promises?(race all and allseteled)(parameter we passed and return type)
+8.  input= [1,2,3,4,5] =>  output=[1,8,9,64,25]
+
+Date: 19-12-24
+
+bhawana
+1. js?
+2. callstack?
+3. async/await?
+4. callback queue. vs microtask queue?
+5. callback?
+6. form in html?
+7. binary search?(practical)
+
+mansi
+1. nodejs?
+2. fs?
+3. buffer?
+4. module?
+5. event loop?
+6. deep copy?
+7. max number from array?
+
+ swati
+
+1.express?
+2.stream?
+3.callstack?
+4.hoisting?
+5.express-session? authentication? body-parser?
+6.second highest from array?
+
+
+rukhmani
+1. node?
+2. module?
+3. hoisting?
+4. middleware? package-json?
+5. js?
+6. 
+
+swasti
+1. js?
+2. bootsrap? grid?
+3.express?
+4. put and patch?
+5. post and get?
+6.primary pattern?
+
+Avantika
+1.oops?
+2.constructor function?
+3.deepcopy?
+4.js/json?
+5.node?
+6.fibonacci series?
+
+yogita
+1.mysql vs sql?
+2.body-parser?
+3.event module?
+4.instance? event-bubbling?
+5.deep copy?
+6.pattern?
+
+Date: 20-12-24
+
+
+ Divya Solnki
+1. Introduce yourself. any example of you are quick learner.
+2. what is js?
+3. promise. promise chaining and methods of promise?
+4. other way of handle depended code in js(without promise)
+5. fs module in nodejs.diff. b/w readfile() and readfilesync().
+6. what is bootsrap. what is core idea behind bootsrap? classes of bootstrap? 
+7. why js is a multiparadigm programming language? oops ? piller of oops?
+8. what is diff. b/w encapsulation and abstraction?
+9. form tag in html?
+10. print series of prime numbers. print prime numbers 1 to 10?
+
+
+ Kirti
+1. why did you changed your field? from whom do you inspire 
+and want to come in it field?
+2. http module in nodejs ? verbs in HTTP module?
+ what is the most secure verb to send data.?
+3.json? can we use a numeric key in js object? example? 
+if yes than how can we access it? 
+4.Event module ? can we create our own events?
+5. Dynamic route ? if we have static route then why we need dynamic route?
+6. why we use ejs ? can we write js code in ejs file if yes then give example?
+7. why we use session? session automatically give session id?
+8. oops ? inheritance ? types of inheritance? Polymorphism? method overloading?
+9. how can we handle multiple argument in function?
+10. what is middleware? types of middleware? 
+   when we use next() parameter in middleware?
+11. how many ways we can create a deep copy?
+12. 0,4,16,36,64
+
+ Trapti patel
+1. Introduce yourself? explain your project? what challenges did you face? 
+2. what is the difference b/w MongoDB and MySQL? the default port of MySQL?
+3. pre tag in html? diff. b/w tag and element?
+4. html entities?
+5. diff. ways of css in html? priority of css if we three use parallel?
+6. if i have div and do not want to show then how it possible?
+7. mern? why we use node? what do you mean by server?
+8. named export and default export? other way to import and export data? required?
+9. event module in nodejs? fs module in nodejs? methods  of fs module?
+10. sequalize? why we use sequalize?
+11. semantic tag in html?
+12. can you explain how a request is generated and how server send a response?
+     explain complete life cycle?
+13. reverse a number?
+
+  sonali Choudhary
+
+1. introduce yourself. explain your project. 
+   and problems did you face during the project?
+2. what is nodejs? modules of nodejs? express?
+3. how can we access an values in object using the numeric key in object javascript? example?
+4. mvc architecture? what is it? and why we use it?
+   it's necessary to use mvc in our project and 
+    if we do not want to use Model than where we will implement model code?
+5. how can i start a server in nodejs? without express?
+6. what is fs module? and why we use it?
+7. what is closure? explain with example?
+8. how can we encapsulate a variable in javascript? 
+   what is encapsulation in oops? real world example?
+   can u ever implement encapsulation in code?  
+9. check a number is palindrome or not?
+
+ 
+  savari 
+
+1. introduce yourself?
+2. diff. b/w element and tag in html? what do you understand by attribute?
+   what is full form of html ? and what is mean of hyper and markup in it?
+3. how can we make our page responsive? mediaQuery?Bootsrap?
+4. types of module in nodejs? http?
+5. why we used express? can we create server using express?
+   what is authentication?
+6. what is rest operator? and what is spread operator?
+7. types of loops in javascript?
+8. types of function? iife ? function statement and arrow function?
+9. pattern
+   *****
+   ****
+   ***
+   **
+   *
+
+  kanita
+1. introduce yourself?
+2. can you explain node? types of module in nodejs? fs module? how it work?
+3. working of callstack?
+4. how can we encapsulate a variable in js? with example?
+5. what is role of const in case of primitive and non-primitive ?
+6. how can we access an values in object using the numeric key   
+    in object javascript? example?
+7. Pattern 
+
+   54321
+   ****
+   321
+   **
+   1
+
+
+ Mansi Bisore
+
+1. introduce yourself? 
+   expain project. which part you handle in project?(database)
+2. what is oop? how js support it?
+3. how many ways we can create a object in js?
+4. json? what is json and bson? where we use them?
+5. why we use http module? http verbs? working of get method?
+ how can we handle data which send through get and post method?
+6. inheritance in js?
+7. deep copy. what is diff. b/w prototype and __proto__.
+8.   1  2   3  4  5
+     10 9   8  7  6 
+     11 12 13 14 15
+     20 19 18 17 16
+
+

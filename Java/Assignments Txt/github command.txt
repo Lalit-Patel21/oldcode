@@ -1,0 +1,69 @@
+ 
+
+git --version
+git version 2.45.2.windows.1
+
+git config --global user.name "lalit17267363716272762"
+
+git config --global user.email "lalitpatel111.da@gmail.com"
+
+git init
+Initialized empty Git repository in 
+
+git add p1.txt
+git status
+On branch master
+
+No commits yet
+
+git commit -m "my first commit"
+git remote add origin https://github.com/Lalit-Patel9/demogit.git
+git push -u origin Master
+remote: Permission to lalit17267363716272762/Java-Learning.git denied to Lalit-Patel21.
+fatal: unable to access 'https://github.com/lalit17267363716272762/Java-Learning.git/': The requested URL returned error: 403
+ git push -u origin Master
+
+
+git config --global --unset user.email
+git config --global user.name "Your Name"
+git config --global user.email "youremail@example.com"
+
+
+
+git config --global user.name "Lalit-Patel9"
+git config --global user.name "Lalit-Patel21"
+
+git config --global user.email "lalitpatel111.da@gmail.com"
+git config --global user.email "gurjarlalitpatel21@gmail.com"
+
+
+git init
+git add P1.txt
+git add P5.java
+
+git status
+
+git commit -m "message"
+
+git remote add origin https://github.com/Lalit-Patel21/Java-journey-.git
+git remote add origin https://github.com/Lalit-Patel21/myfirst-demo.git
+git remote add new-origin https://github.com/Lalit-Patel21/gittesting.git
+git remote set-url origin https://github.com/Lalit-Patel21/myfirst-demo.git
+
+
+git push -u origin master
+git push -u origin main
+
+
+
+git init 
+git add . (to add all file of folder)
+git commit -m "controlstatement"
+git remote add origin https://github.com/Lalit-Patel21/Java-Journey.git
+git push -u origin master
+
+
+
+
+
+

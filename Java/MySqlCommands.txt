@@ -1,0 +1,23 @@
+1.For getting databases in the databse - show databases;
+
+2.For creating database - create database <database name>;
+
+3.To use a existing Database - use <database name>;
+
+4.To get tables created in database -  show tables;
+
+5.To print an table of database - select * from <table name>;
+
+6.To get schema of a table - desc <table_name>;
+
+7.To see current database - select database();
+
+8.To create a table in database - create table <table_name>(batch_no Integer , no_of_students Integer , centre_name varchar(10));
+
+9.To insert data in table - insert into <table_name> values(06,40,'PoloGround');
+
+10. alter table <table_name> modify <column_name> varchar(20);
+
+Ex. -  create table customers (Id integer auto_increment, Name Varchar(32) not null, DOB date not null, Salary double , Gender char(1) not null, Is_Active boolean not null);
+
+ insert into customers (Name , DOB , salary , Gender , Is_Active) values('Ganesh','1996-11-24',50000,'m' , true);

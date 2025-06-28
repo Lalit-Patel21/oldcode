@@ -1,0 +1,699 @@
+Object - oriented
+
+1) What is Object oriented? Write down difference b/w Object oriented and procedure oriented programming approach.
+
+object oriented Programming is a popular Programming Paradigm/style of Programming.
+in OOPs we uses objects to represent data and methods to manipulate that data.
+It is one of the most popular programming paradigm.
+In simple words, it is a programming pattern that resolves around objects or entities.
+Object-oriented programming teaches us how to build software by closely imitating the real world objects or entities.
+
+ 
+the difference b/w Object oriented and procedure oriented programming approche given below:
+
+1.) in oops we we follow bottom-up approach to solve the real world problem and in pop programing approach we follow the top-down approach to solve any problem.
+
+2.)simula67 is first language that 100% follow the concept of OOPs. apart from these 
+C++,Java, python etc. are also OOP languages.
+c language follow the POP Concept.
+
+3.) for code reusability oops provides us Inheritance .
+    for data security OOPs provide us Encapsulation.
+    for Hide complexity OOPs provide us Abstraction.
+    for simplicity  OOPs provide us Polymorphism.
+    but in POP we used Function for code reusibility.
+
+4.) 
+   
+
+
+2)What is class and object? Explain all oop features in java with example.
+
+class  : Class is a blue print of Object.
+         Class is a user defined data typed in java.
+A class is used to specify the basic structure of an object.
+It contains :
+Data members/Attributes
+Methods/Behaviour
+
+Object : In programming any real world entity is an Object.
+Object is a real word entity in oops. 
+Every Object has two main components :- Property and Behaviours.
+
+How to create an object?
+Now to create/represent objects we first have to write all their attributes and methods under a single group. 
+
+This group is called a class.
+
+
+
+3)What are the role of setter and getter method ? What is POJO In Java.
+
+Setter Method : The setter method is used to modify/update the value/data of any variable or a particular data of a object.the return type of setter methods will be always void.
+
+Getter Method : The getter method is used to returned the updated value. It can't be VOID.
+
+the combination of setter and getter methods it is called accessor. accessor is a terminology of ruby language.
+java us Provide the public setter and getter methods in the class to set/modify the values of the variable/fields.
+
+POJO class : The POJO refer to Plain Old Java Object class in java. The class which has variables, Setter & Getter Methods.
+
+4)How to update and retrive  the value of a particular property of an object from anothor class(Let suppose the property is private) ?
+
+The Setter Methods are used to update the value of a perticular property.
+The Getter Methods are used to retrive the updated value of a perticular property.
+	
+If the property is private the setter and getter method must written in the same class will help the object of the class to access the property.
+
+
+5) Create an Object having two properties and four behaviours
+(add,substract,multiply,divide) to perform desired operation.object must have setter and getter and keep all properties private.
+
+class Oop {
+    private double a;
+    private double b;
+
+    public double add(double a, double b) {
+        this.a = a;
+        this.b = b;
+        double c = a + b;
+        return c;
+    }
+
+    public double subtract(double a, double b) {
+        this.a = a;
+        this.b = b;
+        double c = a - b;
+        return c;
+    }
+
+    public double multiply(double a, double b) {
+        this.a = a;
+        this.b = b;
+        double c = a * b;
+        return c;
+    }
+
+    public double divide(double a, double b) {
+        this.a = a;
+        this.b = b;
+        double c = a / b;
+        return c;
+    }
+
+    // Setter
+    public void setA(double a) {
+        this.a = a;
+    }
+
+    public void setB(double b) {
+        this.b = b;
+    }
+
+    // Getter
+    public double getA(double a) {
+        return a;
+    }
+
+    public double getB(double b) {
+        return b;
+    }
+
+}
+
+class TestMain {
+    public static void main(String args[]) {
+        Oop obj = new Oop();
+        double x = obj.add(20, 3);
+        double y = obj.subtract(20, 3);
+        double z = obj.multiply(20, 3);
+        double w = obj.divide(24, 3);
+        System.out.println("Add = " + x + "\nSub = " + y + "\nMultiply = " + z + "\nDivide = " + w);
+    }
+}
+
+
+
+
+
+
+6)What is Constructor? List down the keypoints about constructor.
+
+Constructor : constructor is a special type of function or methods in java. which is called      automatically whenever we create object of any class.
+It is used to initialize the object at the time of object creation.
+
+Keypoints :
+	1.Constructors should not be private.(Genrally)
+	2.Constructors do not have a return type not even void.
+	3.Types: No-Argument Constructor or non parameterizes constructor, Parameterized  
+                 Constructor and Default Constructor.              
+	4.If in a class no constructor is defined JVM will create a default constructor.
+
+
+7)Can we make multiple contructor inside a class? if yes then what is the need of it.Explain,
+
+Yes, we can make multiple constructors inside a class. 
+This is called constructor overloading.
+It is necessary to have different parameters(In terms of datatype,number or sequence), becauseif two constructors have similar parameters the JVM will be confused and generate an ambiguity error. 
+
+
+8) Private constuctor is legal or illegal ?
+  
+We can provide any access modifier to the constructor. If it is made private, then it can only be accessed inside the class.
+It is used to make singleton class.
+
+
+
+9) What is Singleton class explain with suitable example?
+
+Singleton Class : The class in which only one object can be made.
+ Example - Lock with only one key.(Class with only one object).
+
+
+
+10)What is method overloading ? What are importance of method overloading ? Can we overload the main method in java ?
+
+whenever we create method of same name in java
+Method Overloading : When more than one method is made with the same name  then it is called method overloading.
+	
+By overloading a method we can use a single method name for different uses. Like if we want to make a method to
+	add integer then rather than making methods with different names for different number of integer we can make mathods
+	by single name and with different parameters in terms of datatype, number or sequence.
+	
+	Yes, we can overload the main() method but the JVM will look for the Original main() method (i.e. public static vaid main(String args []))
+	to invoke the overloaded method we need to call it in the Original main() method
+
+
+
+
+
+11) How to pass as many argument to java method?
+
+By Var-arg we can pass as many arguments to the java method of similar kind.
+	
+Syntax :
+	public void m1(int...n) , here 'int...n' is integer type var-arg
+
+
+12) Can we overload the method with var-arg type of argument.
+
+ Yes, we can overload a method with var-arg, by passing parameter of different datatype before the var-arg.
+
+
+13) Create a class to calculate Area of circle with one data member to store the radius and another to store area value. Create method members
+init - to input radius from user
+calc - to calculate area
+display- to display area
+
+class AreaOfCircle{
+private double radius;
+private double area;
+
+public void init(double radius)
+{
+ this.radius= radius;
+}
+public void Calc()
+{
+area=2*Math.PI*Math.pow(radius,2);
+}
+public void display()
+{
+System.out.println("The Area of circle is "+area);
+}
+}
+public class UseAreaOfCircle{
+public static void main(String []args){
+
+AreaOfCircle ac = new AreaOfCircle();
+
+ac.init(6);
+ac.Calc();
+ac.display();
+
+}
+}
+14) Create a class MathOperation with two data member X and Y to store the operand and third data member R to store result of operation.Create method members
+init - to input X and Y from user
+add - to add X and Y and store in R
+multiply - to multiply X and Y and store in R
+power - to calculate X Y and store in R
+display- to display Result R
+
+class MathOperation{
+
+private int X;
+private int Y;
+private int R;
+public MathOperation()
+{
+
+}
+
+public void init(int X,int Y)
+{
+this.X=X;
+this.Y=Y;
+} 
+
+public void add(){
+R=X+Y;
+}
+public void sub(){
+R=X-Y;
+}
+public void mul(){
+R=X*Y;
+}
+public void power(){
+R=(int)Math.pow(X,Y);
+}
+
+public void display(){
+
+System.out.println("Result : "+R);
+}
+}
+public class UseMathOperation{
+
+public static void main(String []args){
+
+MathOperation m = new MathOperation();
+
+m.init(6,7);
+m.add();
+m.display();
+
+m.init(6,7);
+m.Sub();
+m.display();
+
+m.init(6,7);
+m.mul();
+m.display();
+
+m.init(6,7);
+m.power();
+m.display();
+}
+}
+
+15) Create a class MathOperation containing method ‘multiply’ to calculate multiplication of following arguments.
+two integers
+three float
+all elements of array
+one double and one integer
+package OOPSIAsignment;
+class MathMulti{
+
+    public MathMulti()
+    {
+
+    }
+    public void multiply(int X,int Y){
+        System.out.println("Result : "+(X*Y));
+    }
+    public void multiply(float X,float Y,float Z){
+
+        System.out.println("Result : "+(X*Y*Z));
+    }
+    public void multiply(double X,int Y){
+        System.out.println("Result : "+(X*Y));
+    }
+    public void multiply(int [] X){
+        int multi = 1;
+        for (int x : X){
+            multi*=x;
+        }
+        System.out.println("Result : "+(multi));
+    }
+}
+public class UseMathMulti{
+
+    public static void main(String []args){
+
+        MathMulti m = new MathMulti();
+        m.multiply(5,6);
+        m.multiply(5.0f,6.0f,7.0f);
+        m.multiply(5.0,6);
+        int [] arr = new int[]{5,6,7,10};
+        m.multiply(arr);
+    }
+}
+
+
+16) Create a class Person with properties (name and age) with following features.
+Default age of person should be 18.
+A person object can be initialized with name and age.
+Method to display name and age of person.
+
+package OOPSIAsignment;
+
+class Person{
+    private String name;
+    private int age;
+
+    public Person(String name,int age){
+        
+        this.name=name;
+        this.age=age;
+
+    }
+    public void showDisplay(){
+        System.out.println("Person name is : "+this.name);
+        System.out.println("Person age is : "+this.age);
+    }
+
+}
+
+public class UsePerson {
+    public static void main(String[] args) {
+        Person p1 = new Person("Jaypal",50);
+        Person p2 = new Person("Ravin",50);
+        Person p3 = new Person("Lalit",50);
+
+        p1.showDisplay();
+        p2.showDisplay();
+        p3.showDisplay();
+    }
+}
+
+
+17) Create a class Employee with(empNo ,salary and totalSalary)  with following features.
+Only parameterized constructor;
+totalSalary always represent total of all the salaries of all employees created.
+empNo should be auto incremented.
+display total employees and totalSalary using class method.
+
+
+package OOPSIAsignment;
+
+class Employee{
+    private static int empNo=0;
+    private int salary;
+    private static int totalSalary;
+
+    public Employee()
+    {
+
+    }
+    public Employee(int salary)
+    {
+        this.salary=salary;
+        totalSalary+=salary;
+        empNo++;
+    }
+    public static void showDisplay(){
+        System.out.println("Total Employees are : "+empNo);
+        System.out.println("Total Salary "+totalSalary);
+    }
+    
+}
+public class UseEmployee {
+    public static void main(String[] args) {
+        Employee e1 = new Employee(5000);
+        Employee e2 = new Employee(5000);
+        Employee e3 = new Employee(5000);
+        Employee.showDisplay();
+    }
+}
+
+
+18) Create class Product (pid, price, quantity) with parameterized constructor.
+Create a main function in different class (say XYZ) and perform following task:
+Accept five product information from user and store in an array
+Find Pid of product with highest price.
+Create method (with array of product’s object as argument) in XYZ class to calculate and return total amount spent on all products. (amount spent on single product=price of product * quantity of product).
+
+
+package OOPSIAsignment;
+import java.util.Scanner;
+class Product{
+    private  int pid;
+    private double price;
+    private int quantity;
+
+    public Product(int pid,double price,int quantity){
+        this.pid=pid;
+        this.price=price;
+        this.quantity=quantity;
+    }
+    public int getPid() {
+        return pid;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+}
+public class UseProduct {
+
+    public static void main(String[] args){
+//        System.out.println("Student Grade-A :"+Student.getCountGrade());
+
+        Scanner scanner = new Scanner(System.in);
+        Product[] products = new Product[5];
+
+        // Accept five product information from user and store in an array
+        for (int i = 0; i < products.length; i++) {
+            System.out.println("Enter details for product " + (i + 1));
+            System.out.print("Product ID: ");
+            int pid = scanner.nextInt();
+            System.out.print("Price: ");
+            double price = scanner.nextDouble();
+            System.out.print("Quantity: ");
+            int quantity = scanner.nextInt();
+            products[i] = new Product(pid, price, quantity);
+        }
+
+
+        // Find Pid of product with highest price
+        int highestPricePid = findProductWithHighestPrice(products);
+        System.out.println("Product ID with highest price: " + highestPricePid);
+
+        // Calculate and display the total amount spent on all products
+        double totalAmountSpent = calculateTotalAmountSpent(products);
+        System.out.println("Total amount spent on all products: " + totalAmountSpent);
+    }
+
+    // Method to find the product with the highest price
+    public static int findProductWithHighestPrice(Product[] products) {
+        int highestPricePid = products[0].getPid();
+        double highestPrice = products[0].getPrice();
+
+        for (Product product : products) {
+            if (product.getPrice() > highestPrice) {
+                highestPrice = product.getPrice();
+                highestPricePid = product.getPid();
+            }
+        }
+
+        return highestPricePid;
+    }
+
+    // Method to calculate and return total amount spent on all products
+    public static double calculateTotalAmountSpent(Product[] products) {
+        double totalAmount = 0.0;
+
+        for (Product product : products) {
+            totalAmount += product.getPrice() * product.getQuantity();
+        }
+
+        return totalAmount;
+    }
+}
+
+
+
+19) Make list of Students having name, roll no., age, score. Write a program to accept 10 students record and arrange the Students based on the score group [0-50], [50-65],[65-80],[80-100].
+
+Ans :
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+class Student {
+    private String name;
+    private int rollNo;
+    private int age;
+    private int score;
+
+    public Student(String name, int rollNo, int age, int score) {
+        this.name = name;
+        this.rollNo = rollNo;
+        this.age = age;
+        this.score = score;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getRollNo() {
+        return rollNo;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", rollNo=" + rollNo +
+                ", age=" + age +
+                ", score=" + score +
+                '}';
+    }
+}
+
+public class StudentScoreGrouping {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        List<Student> students = new ArrayList<>();
+
+        // Accept 10 students record from user
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Enter details for student " + (i + 1));
+            System.out.print("Name: ");
+            String name = scanner.nextLine();
+            System.out.print("Roll No: ");
+            int rollNo = scanner.nextInt();
+            System.out.print("Age: ");
+            int age = scanner.nextInt();
+            System.out.print("Score: ");
+            int score = scanner.nextInt();
+            scanner.nextLine(); // consume the newline
+            students.add(new Student(name, rollNo, age, score));
+        }
+
+        // Group students based on score
+        List<Student> group1 = new ArrayList<>();
+        List<Student> group2 = new ArrayList<>();
+        List<Student> group3 = new ArrayList<>();
+        List<Student> group4 = new ArrayList<>();
+
+        for (Student student : students) {
+            if (student.getScore() <= 50) {
+                group1.add(student);
+            } else if (student.getScore() <= 65) {
+                group2.add(student);
+            } else if (student.getScore() <= 80) {
+                group3.add(student);
+            } else {
+                group4.add(student);
+            }
+        }
+
+        // Print grouped students
+        System.out.println("Students with score [0-50]:");
+        for (Student student : group1) {
+            System.out.println(student);
+        }
+
+        System.out.println("\nStudents with score [50-65]:");
+        for (Student student : group2) {
+            System.out.println(student);
+        }
+
+        System.out.println("\nStudents with score [65-80]:");
+        for (Student student : group3) {
+            System.out.println(student);
+        }
+
+        System.out.println("\nStudents with score [80-100]:");
+        for (Student student : group4) {
+            System.out.println(student);
+        }
+    }
+}
+
+20)Create class Tile to store the edge length of a square tile , and create another class Floor to store length and width of a rectangular floor. Add method totalTiles(Tile t) in Floor class with Tile as argument to calculate the whole number of tiles needed to cover the floor completely.
+
+Ans : 
+package OOPSIAsignment;
+class Tile {
+    private double length;
+
+    public Tile() {
+
+    }
+    public Tile(double length) {
+        this.length = length;
+    }
+
+    public void setLength(double length) {
+
+        this.length = length;
+    }
+
+    public double getLength() {
+
+        return this.length;
+    }
+
+    public double showAreaOfSquareTile() {
+        return this.getLength() * getLength();
+    }
+
+}
+class RectangularFloor{
+private double rLength;
+private double width;
+
+public RectangularFloor(double rLength,double width)
+{
+ this.rLength=rLength;
+ this.width=width;
+
+}
+public void setRLength(double rLength){
+    this.rLength = rLength;
+}
+public double getRLength(){
+    return this.rLength;
+}
+public void setWidth(double width){
+        this.width = width;
+}
+public double getWidth(){
+        return this.width;
+}
+public double showRectangularFloorArea(){
+   return this.getRLength()*getWidth();
+}
+    public int totalTiles(Tile t) {
+        // Calculate the area of the floor
+//        double floorArea = rLength * width;
+        double floorArea = showRectangularFloorArea();
+        // Calculate the area of one tile
+        double tileArea = t.showAreaOfSquareTile();
+        // Calculate the number of tiles needed to cover the floor
+        return (int) Math.ceil(floorArea / tileArea);
+    }
+}
+class UseRectangularFloor{
+public static void main(String[] args) {
+
+    Tile tile = new Tile(20);
+    RectangularFloor rf = new RectangularFloor(50.0,60.0);
+    int totalTiles = rf.totalTiles(tile);
+    System.out.println("Total tiles  "+totalTiles);
+
+}
+}
+
+
+
+
+
